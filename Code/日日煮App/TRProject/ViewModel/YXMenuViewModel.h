@@ -1,0 +1,22 @@
+//
+//  YXMenuViewModel.h
+//  TRProject
+//
+//  Created by 李晨 on 16/6/16.
+//  Copyright © 2016年 Tarena. All rights reserved.
+//
+
+#import "TRBaseViewModel.h"
+#import "YXNetManager.h"
+@interface YXMenuViewModel : TRBaseViewModel
+
+/** 加载更多数据的可变数组 */
+@property (nonatomic, strong) NSMutableArray<MenuDataModel *> *dataList;
+//对应行数
+- (NSInteger)numberForRow;
+//图片
+- (NSURL *)iconIVForRow:(NSInteger)row;
+
+/** 有更多页 */
+@property (nonatomic) BOOL isLoadMore;
+@end
