@@ -30,6 +30,7 @@ static NSString *const identify = @"Cell";
                 return ;
             }
             [weakSelf.collectionView reloadData];
+            [weakSelf.collectionView endHeaderRefresh];
             if (weakSelf.menuVM.isLoadMore) {
                 [weakSelf.collectionView endFooterRefresh];
             }else {
@@ -61,7 +62,13 @@ static NSString *const identify = @"Cell";
 }
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     YXFirstPageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identify forIndexPath:indexPath];
-    [cell.imageV sd_setImageWithURL:[self.menuVM iconIVForRow:indexPath.row]];
+    cell.labelClickCount.text = [self.menuVM clickCountForRow:indexPath.row];
+    cell.labelCookTime.text = [self.menuVM cookTimeForRow:indexPath.row];
+    cell.labelShareCount.text = [self.menuVM shareCountForRow:indexPath.row];
+    cell.labelDec.text = [self.menuVM detailForRow:indexPath.row];
+    cell.labelTitle.text = [self.menuVM titleForRow:indexPath.row];
+    cell.labelReNewTime.text = [self.menuVM releaseDateForRow:indexPath.row];
+    [cell.imageV sd_setImageWithURL:[self.menuVM iconIVForRow:indexPath.row]placeholderImage:@"default".yx_image];
     return cell;
 }
 #pragma mark - CollectionView Delegate
@@ -73,7 +80,7 @@ static NSString *const identify = @"Cell";
     return CGSizeMake(kScreenW, kScreenH/2);
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
-    return -100;
+    return 0;
 }
 #pragma mark - 初始化方式
 - (instancetype)init

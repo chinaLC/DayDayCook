@@ -15,7 +15,7 @@
 @end
 @implementation YXMenuViewModel
 - (void)getDataWithRequestMode:(VMRequestMode)requestMode completionHandler:(void (^)(NSError *))completionHandler{
-    NSInteger tmpPage = 1;
+    NSInteger tmpPage = 0;
     if (requestMode == VMRequestModeMore) {
         tmpPage = _page + 1;
     }
@@ -35,8 +35,37 @@
 - (NSInteger)numberForRow{
     return self.dataList.count;
 }
+
 - (NSURL *)iconIVForRow:(NSInteger)row{
     return self.dataList[row].imageUrl.yx_URL;
+}
+
+- (NSString *)clickCountForRow:(NSInteger)row{
+    return [NSString stringWithFormat:@"%ld",self.dataList[row].clickCount];
+}
+
+- (NSString *)shareCountForRow:(NSInteger)row{
+    return [NSString stringWithFormat:@"%ld",self.dataList[row].shareCount];
+}
+
+- (NSString *)cookTimeForRow:(NSInteger)row{
+    return self.dataList[row].maketime;
+}
+
+- (NSString *)detailForRow:(NSInteger)row{
+    return self.dataList[row].desc;
+}
+
+- (NSString *)titleForRow:(NSInteger)row{
+    return self.dataList[row].title;
+}
+- (NSString *)releaseDateForRow:(NSInteger)row{
+    NSString *date = self.dataList[row].releaseDate;
+    NSInteger year = [date substringToIndex:4].integerValue;
+    if (year == 2016) {
+        return [date substringFromIndex:5];
+    }
+    return date;
 }
 #pragma mark - LazyLoad 懒加载
 - (NSMutableArray<MenuDataModel *> *)dataList {

@@ -42,15 +42,11 @@
     if (!_window) {
         _window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
         [_window makeKeyAndVisible];
-//        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
-//        layout.minimumLineSpacing = 10;
-//        layout.minimumInteritemSpacing = 0;
-//        layout.itemSize = CGSizeMake(kScreenW-20, (kScreenW-20)/2.0);
-//        layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);
-//        layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-//        YXFirstPageViewController *firstPageVC = [[YXFirstPageViewController alloc]initWithCollectionViewLayout:layout];
-YXFirstPageViewController *firstPageVC = [[YXFirstPageViewController alloc]init];
+        YXFirstPageViewController *firstPageVC = [[YXFirstPageViewController alloc]init];
         UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:firstPageVC];
+        [UINavigationBar appearance].barStyle = UIBarStyleBlack;
+        [UINavigationBar appearance].translucent = NO;
+        [UINavigationBar appearance].barTintColor = kRGBColor(244, 177, 46, 1.0);
         _window.rootViewController = navi;
     }
     return _window;

@@ -22,10 +22,15 @@
 /** 更新时间 */
 @property (nonatomic, strong) UILabel *labelReNewTime;
 
+/** 分享人数 */
+@property (nonatomic, strong) UILabel *labelShareCount;
+
 /** 烹调时长 */
 @property (nonatomic, strong) UILabel *labelCookTime;
 
 /** 点击人数 */
 @property (nonatomic, strong) UILabel *labelClickCount;
+
+
 
 @end
