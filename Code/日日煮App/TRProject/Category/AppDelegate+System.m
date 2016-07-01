@@ -46,7 +46,7 @@
         UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:firstPageVC];
         [UINavigationBar appearance].barStyle = UIBarStyleBlack;
         [UINavigationBar appearance].translucent = NO;
-        [UINavigationBar appearance].barTintColor = kRGBColor(244, 177, 46, 1.0);
+        [UINavigationBar appearance].barTintColor = kRGBColor(244, 187, 73, 1.0);
         _window.rootViewController = navi;
     }
     return _window;

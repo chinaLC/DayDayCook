@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface YXFirstPageViewController : UICollectionViewController
+@interface YXFirstPageViewController : UIViewController
 
 @end

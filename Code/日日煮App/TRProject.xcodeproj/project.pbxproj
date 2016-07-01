@@ -15,7 +15,6 @@
 		386BF94B1CBB3C9600BC74F1 /* NSObject+Parse.m in Sources */ = {isa = PBXBuildFile; fileRef = 386BF94A1CBB3C9600BC74F1 /* NSObject+Parse.m */; };
 		386BF94E1CBB3CE200BC74F1 /* NSString+YX.m in Sources */ = {isa = PBXBuildFile; fileRef = 386BF94D1CBB3CE200BC74F1 /* NSString+YX.m */; };
 		3899BC981C7D87620032ADEA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3899BC971C7D87620032ADEA /* CFNetwork.framework */; };
-		38A1A3371C74526C007EEEB7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A1A3351C74526C007EEEB7 /* ViewController.m */; };
 		38A1A3461C745317007EEEB7 /* NSObject+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A1A3411C745317007EEEB7 /* NSObject+AFNetworking.m */; };
 		38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A1A3451C745317007EEEB7 /* UIScrollView+Refresh.m */; };
 		38A641F81C8C225D00FCBF96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38A641F51C8C225D00FCBF96 /* Assets.xcassets */; };
@@ -23,6 +22,11 @@
 		38A641FA1C8C225D00FCBF96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38A641F71C8C225D00FCBF96 /* Main.storyboard */; };
 		38ADA3B81C626AAF0093502F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ADA3B71C626AAF0093502F /* main.m */; };
 		38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38ADA3BA1C626AAF0093502F /* AppDelegate.m */; };
+		DB038E391D26A82200D84366 /* YXSearchPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB038E381D26A82200D84366 /* YXSearchPageViewController.m */; };
+		DB038E3C1D26AABA00D84366 /* XLPlainFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DB038E3B1D26AABA00D84366 /* XLPlainFlowLayout.m */; };
+		DB038E421D26CD0700D84366 /* YXSearchHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB038E411D26CD0700D84366 /* YXSearchHeaderView.m */; };
+		DB038E451D26CD2B00D84366 /* YXSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB038E441D26CD2B00D84366 /* YXSearchCell.m */; };
+		DB038E481D26E4D400D84366 /* YXMyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB038E471D26E4D400D84366 /* YXMyPageViewController.m */; };
 		DB3CE7001D12315E009D3F52 /* YXMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CE6FF1D12315E009D3F52 /* YXMenuModel.m */; };
 		DB3CEAA91D12BC2D009D3F52 /* YXNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAA81D12BC2D009D3F52 /* YXNetManager.m */; };
 		DB3CEAAC1D12BE91009D3F52 /* YXMenuViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAAB1D12BE91009D3F52 /* YXMenuViewModel.m */; };
@@ -45,8 +49,6 @@
 		386BF94C1CBB3CE200BC74F1 /* NSString+YX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+YX.h"; sourceTree = "<group>"; };
 		386BF94D1CBB3CE200BC74F1 /* NSString+YX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+YX.m"; sourceTree = "<group>"; };
 		3899BC971C7D87620032ADEA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
-		38A1A3341C74526C007EEEB7 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		38A1A3351C74526C007EEEB7 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		38A1A3381C74527F007EEEB7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		38A1A33F1C7452F2007EEEB7 /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		38A1A3401C745317007EEEB7 /* NSObject+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AFNetworking.h"; sourceTree = "<group>"; };
@@ -62,6 +64,16 @@
 		38ADA3BA1C626AAF0093502F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3A8F54CE0222A3F4E0D59483 /* libPods-TRProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TRProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D5968AB9B9E44E939066EA /* Pods-TRProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRProject/Pods-TRProject.release.xcconfig"; sourceTree = "<group>"; };
+		DB038E371D26A82200D84366 /* YXSearchPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXSearchPageViewController.h; sourceTree = "<group>"; };
+		DB038E381D26A82200D84366 /* YXSearchPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXSearchPageViewController.m; sourceTree = "<group>"; };
+		DB038E3A1D26AABA00D84366 /* XLPlainFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPlainFlowLayout.h; sourceTree = "<group>"; };
+		DB038E3B1D26AABA00D84366 /* XLPlainFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPlainFlowLayout.m; sourceTree = "<group>"; };
+		DB038E401D26CD0700D84366 /* YXSearchHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXSearchHeaderView.h; sourceTree = "<group>"; };
+		DB038E411D26CD0700D84366 /* YXSearchHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXSearchHeaderView.m; sourceTree = "<group>"; };
+		DB038E431D26CD2B00D84366 /* YXSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXSearchCell.h; sourceTree = "<group>"; };
+		DB038E441D26CD2B00D84366 /* YXSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXSearchCell.m; sourceTree = "<group>"; };
+		DB038E461D26E4D400D84366 /* YXMyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMyPageViewController.h; sourceTree = "<group>"; };
+		DB038E471D26E4D400D84366 /* YXMyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMyPageViewController.m; sourceTree = "<group>"; };
 		DB3CE6FE1D12315E009D3F52 /* YXMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMenuModel.h; sourceTree = "<group>"; };
 		DB3CE6FF1D12315E009D3F52 /* YXMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMenuModel.m; sourceTree = "<group>"; };
 		DB3CEAA71D12BC2D009D3F52 /* YXNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXNetManager.h; sourceTree = "<group>"; };
@@ -175,6 +187,10 @@
 			children = (
 				DB3CEAD61D13916B009D3F52 /* YXFirstPageCell.h */,
 				DB3CEAD71D13916B009D3F52 /* YXFirstPageCell.m */,
+				DB038E401D26CD0700D84366 /* YXSearchHeaderView.h */,
+				DB038E411D26CD0700D84366 /* YXSearchHeaderView.m */,
+				DB038E431D26CD2B00D84366 /* YXSearchCell.h */,
+				DB038E441D26CD2B00D84366 /* YXSearchCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -182,10 +198,12 @@
 		38A1A3331C74526C007EEEB7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				38A1A3341C74526C007EEEB7 /* ViewController.h */,
-				38A1A3351C74526C007EEEB7 /* ViewController.m */,
 				DB3CEAAD1D137F04009D3F52 /* YXFirstPageViewController.h */,
 				DB3CEAAE1D137F04009D3F52 /* YXFirstPageViewController.m */,
+				DB038E371D26A82200D84366 /* YXSearchPageViewController.h */,
+				DB038E381D26A82200D84366 /* YXSearchPageViewController.m */,
+				DB038E461D26E4D400D84366 /* YXMyPageViewController.h */,
+				DB038E471D26E4D400D84366 /* YXMyPageViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -261,6 +279,8 @@
 		DB3CEB011D13A908009D3F52 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DB038E3A1D26AABA00D84366 /* XLPlainFlowLayout.h */,
+				DB038E3B1D26AABA00D84366 /* XLPlainFlowLayout.m */,
 				DB3CEB021D13A908009D3F52 /* StickCollectionViewFlowLayout.h */,
 				DB3CEB031D13A908009D3F52 /* StickCollectionViewFlowLayout.m */,
 			);
@@ -393,15 +413,19 @@
 			files = (
 				382C976A1C81D686003D1D51 /* UIView+HUD.m in Sources */,
 				DB3CEAAF1D137F04009D3F52 /* YXFirstPageViewController.m in Sources */,
+				DB038E481D26E4D400D84366 /* YXMyPageViewController.m in Sources */,
 				DB3CEAAC1D12BE91009D3F52 /* YXMenuViewModel.m in Sources */,
 				38A1A3461C745317007EEEB7 /* NSObject+AFNetworking.m in Sources */,
 				38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */,
 				DB3CEB041D13A908009D3F52 /* StickCollectionViewFlowLayout.m in Sources */,
 				386BF94E1CBB3CE200BC74F1 /* NSString+YX.m in Sources */,
+				DB038E3C1D26AABA00D84366 /* XLPlainFlowLayout.m in Sources */,
+				DB038E421D26CD0700D84366 /* YXSearchHeaderView.m in Sources */,
 				DB3CEAD81D13916B009D3F52 /* YXFirstPageCell.m in Sources */,
 				DB3CEAA91D12BC2D009D3F52 /* YXNetManager.m in Sources */,
 				386BF94B1CBB3C9600BC74F1 /* NSObject+Parse.m in Sources */,
-				38A1A3371C74526C007EEEB7 /* ViewController.m in Sources */,
+				DB038E391D26A82200D84366 /* YXSearchPageViewController.m in Sources */,
+				DB038E451D26CD2B00D84366 /* YXSearchCell.m in Sources */,
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
 				3851FBE11D0F0C110054BDA0 /* TRBaseViewModel.m in Sources */,
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
