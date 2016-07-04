@@ -28,6 +28,8 @@
 - (NSString *)titleForRow:(NSInteger)row;
 //更新时间
 - (NSString *)releaseDateForRow:(NSInteger)row;
+//数据
+- (MenuDataModel *)dataForRow:(NSInteger)row;
 /** 有更多页 */
 @property (nonatomic) BOOL isLoadMore;
 @end

@@ -15,7 +15,7 @@
 @end
 @implementation MenuDataModel
 + (NSDictionary<NSString *,id> *)modelCustomPropertyMapper{
-    return @{@"id": @"ID",
+    return @{@"ID": @"id",
              @"desc": @"description"};
 }
 @end

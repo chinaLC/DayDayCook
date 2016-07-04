@@ -88,7 +88,7 @@
             make.bottom.equalTo(-18);
         }];
         _labelNum.textColor = kRGBColor(174, 165, 168, 1.0);
-        _labelNum.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];;
+        _labelNum.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
     }
     return _labelNum;
 }

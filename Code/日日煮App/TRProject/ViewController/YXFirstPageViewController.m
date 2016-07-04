@@ -11,6 +11,7 @@
 #import "YXFirstPageCell.h"
 #import "StickCollectionViewFlowLayout.h"
 #import "YXSearchPageViewController.h"
+#import "YXCookMenuViewController.h"
 static NSString *const identify = @"Cell";
 
 @interface YXFirstPageViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
@@ -54,7 +55,6 @@ static NSString *const identify = @"Cell";
 }
 #pragma mark - CollectionView Delegate
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    //    return CGSizeMake(CGRectGetWidth(self.view.bounds), kCellHeight);
     if (collectionView.frame.origin.y == kScreenH/2) {
         return CGSizeMake(kScreenW, kScreenH/4);
     }
@@ -62,6 +62,13 @@ static NSString *const identify = @"Cell";
 }
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return 0;
+}
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    YXCookMenuViewController *cookMenuVC = [[YXCookMenuViewController alloc]initWithData:[self.menuVM dataForRow:indexPath.row]];
+//    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self.navigationController pushViewController:cookMenuVC animated:YES];
+//    self.navigationController.navigationBarHidden = NO;
 }
 #pragma mark - LazyLoad 懒加载
 - (YXMenuViewModel *)menuVM {

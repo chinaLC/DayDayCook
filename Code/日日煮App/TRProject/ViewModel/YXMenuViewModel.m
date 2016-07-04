@@ -67,6 +67,9 @@
     }
     return date;
 }
+- (MenuDataModel *)dataForRow:(NSInteger)row{
+    return self.dataList[row];
+}
 #pragma mark - LazyLoad 懒加载
 - (NSMutableArray<MenuDataModel *> *)dataList {
     if(_dataList == nil) {

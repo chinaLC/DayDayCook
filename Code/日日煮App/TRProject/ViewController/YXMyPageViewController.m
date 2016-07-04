@@ -14,7 +14,6 @@ static NSString *const myPageIdentify = @"MyPageCell";
 {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        
     }
     return self;
 }
@@ -29,10 +28,14 @@ static NSString *const myPageIdentify = @"MyPageCell";
     }];
     self.tableView.tableHeaderView = view;
     self.tableView.tableFooterView = @"launch_back".yx_imageView;
+    self.tableView.scrollEnabled = NO;
 }
 #pragma mark - UITableView Delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return section ? 0: 20;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 #pragma mark - UITableView DateSourse
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
