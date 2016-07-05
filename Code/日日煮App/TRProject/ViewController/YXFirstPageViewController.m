@@ -66,9 +66,7 @@ static NSString *const identify = @"Cell";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     YXCookMenuViewController *cookMenuVC = [[YXCookMenuViewController alloc]initWithData:[self.menuVM dataForRow:indexPath.row]];
-//    [self.navigationController setNavigationBarHidden:YES animated:YES];
     [self.navigationController pushViewController:cookMenuVC animated:YES];
-//    self.navigationController.navigationBarHidden = NO;
 }
 #pragma mark - LazyLoad 懒加载
 - (YXMenuViewModel *)menuVM {

@@ -12,6 +12,7 @@
 #import "YXSearchHeaderView.h"
 #import "YXMenuViewModel.h"
 #import "YXMyPageViewController.h"
+#import "YXCookMenuViewController.h"
 static NSString *const cellIdentify = @"CollectionCell";
 static NSString *const headerIdentify = @"HeaderView";
 @interface YXSearchPageViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
@@ -59,6 +60,11 @@ static NSString *const headerIdentify = @"HeaderView";
     return cell;
 }
 #pragma mark - UICollectionView Delegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    [collectionView deselectItemAtIndexPath:indexPath animated:YES];
+    YXCookMenuViewController *cookMenuVC = [[YXCookMenuViewController alloc]initWithData:[self.menuVM dataForRow:indexPath.row]];
+    [self.navigationController pushViewController:cookMenuVC animated:YES];
+}
 -(CGSize)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
     if(!section){

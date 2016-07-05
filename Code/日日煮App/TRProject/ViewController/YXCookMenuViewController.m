@@ -8,6 +8,8 @@
 
 #import "YXCookMenuViewController.h"
 #import "YXCookMenuView.h"
+@import AVKit;
+@import AVFoundation;
 @interface YXCookMenuViewController ()<UIScrollViewDelegate>
 
 /** WebView */
@@ -74,20 +76,20 @@
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    //通过滑动的便宜距离重新给图片设置大小
+    //通过滑动的遍历距离重新给图片设置大小
     CGFloat yOffset = scrollView.contentOffset.y;
     if(yOffset<-400)
     {
-        CGRect f= self.img.frame;
-        f.origin.y = yOffset+300;
-        f.size.height = -yOffset;
-        f.origin.x = -(-yOffset/300.0*kScreenW - kScreenW)/2.0;
-        f.size.width = -yOffset/300.0*kScreenW;
+        CGRect imgFrame = self.img.frame;
+        imgFrame.origin.y = yOffset+300;
+        imgFrame.size.height = -yOffset;
+        imgFrame.origin.x = -(-yOffset/300.0*kScreenW - kScreenW)/2.0;
+        imgFrame.size.width = -yOffset/300.0*kScreenW;
+//        self.btnPlay.center = self.img.center;
 //        CGRect btnF = self.btnPlay.frame;
-//        btnF.origin.y = yOffset + 300 + 130;
-//        btnF.size.height = -yOffset/300.0 * 60;
 //        btnF.size.width = -yOffset/300.0 * 60;
-        self.img.frame = f;
+//        btnF.size.height = -yOffset/300.0 * 60;
+        self.img.frame = imgFrame;
 //        self.btnPlay.frame = btnF;
     }
 }
@@ -162,6 +164,9 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 - (void)clickTheBtnPlayTheVideo:sender{
-    NSLog(@"play");
+    AVPlayerViewController *playerVC = [[AVPlayerViewController alloc]init];
+    playerVC.player = [AVPlayer playerWithURL:self.data.detailsUrl.yx_URL];
+    [playerVC.player play];
+    [self presentViewController:playerVC animated:YES completion:nil];
 }
 @end

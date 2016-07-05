@@ -60,9 +60,13 @@
     return self.dataList[row].title;
 }
 - (NSString *)releaseDateForRow:(NSInteger)row{
+    NSDateFormatter *now = [[NSDateFormatter alloc] init];
+    [now setDateStyle:NSDateFormatterShortStyle];
+    [now setDateFormat:@"YYYY"];
+    NSInteger currectYear = [now stringFromDate:[NSDate date]].integerValue;
     NSString *date = self.dataList[row].releaseDate;
     NSInteger year = [date substringToIndex:4].integerValue;
-    if (year == 2016) {
+    if (year == currectYear) {
         return [date substringFromIndex:5];
     }
     return date;
