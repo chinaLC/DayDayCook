@@ -8,6 +8,7 @@
 
 #import "YXMyPageViewController.h"
 #import "YXLoginViewController.h"
+#import "YXSettingViewController.h"
 static NSString *const myPageIdentify = @"MyPageCell";
 
 @interface YXMyPageViewController ()
@@ -60,6 +61,10 @@ static NSString *const myPageIdentify = @"MyPageCell";
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section) {
+        YXSettingViewController *settingVC = [YXSettingViewController new];
+        [self.navigationController pushViewController:settingVC animated:YES];
+    }
 }
 #pragma mark - UITableView DateSourse
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

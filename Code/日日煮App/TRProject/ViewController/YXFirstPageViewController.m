@@ -84,7 +84,7 @@ static NSString *const identify = @"Cell";
 - (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
     CGRect rect = self.searchView.frame;
     rect.origin.x = kScreenW - 20;
-    [UIView animateWithDuration:1 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
          self.searchView.frame = rect;
     }];
 }

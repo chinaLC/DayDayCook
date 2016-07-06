@@ -38,6 +38,7 @@
 		DB6F04BD1D2B95210052CD75 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6F04BC1D2B95210052CD75 /* KxMenu.m */; };
 		DB6F04C11D2B987D0052CD75 /* MyBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB6F04C01D2B987D0052CD75 /* MyBundle.bundle */; };
 		DBC9CE271D2BB3BA002577EB /* YXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9CE261D2BB3BA002577EB /* YXLoginViewController.m */; };
+		DBC9CE2A1D2D0910002577EB /* YXSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9CE291D2D0910002577EB /* YXSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,8 @@
 		DB6F04C01D2B987D0052CD75 /* MyBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MyBundle.bundle; sourceTree = "<group>"; };
 		DBC9CE251D2BB3BA002577EB /* YXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoginViewController.h; sourceTree = "<group>"; };
 		DBC9CE261D2BB3BA002577EB /* YXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoginViewController.m; sourceTree = "<group>"; };
+		DBC9CE281D2D0910002577EB /* YXSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXSettingViewController.h; sourceTree = "<group>"; };
+		DBC9CE291D2D0910002577EB /* YXSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXSettingViewController.m; sourceTree = "<group>"; };
 		DDE25EAEFBF2DF6DBEDAD90D /* Pods-TRProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRProject/Pods-TRProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -309,6 +312,8 @@
 				DB038E471D26E4D400D84366 /* YXMyPageViewController.m */,
 				DBC9CE251D2BB3BA002577EB /* YXLoginViewController.h */,
 				DBC9CE261D2BB3BA002577EB /* YXLoginViewController.m */,
+				DBC9CE281D2D0910002577EB /* YXSettingViewController.h */,
+				DBC9CE291D2D0910002577EB /* YXSettingViewController.m */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -472,6 +477,7 @@
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
 				3851FBE11D0F0C110054BDA0 /* TRBaseViewModel.m in Sources */,
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
+				DBC9CE2A1D2D0910002577EB /* YXSettingViewController.m in Sources */,
 				DB6F04BD1D2B95210052CD75 /* KxMenu.m in Sources */,
 				DB3CE7001D12315E009D3F52 /* YXMenuModel.m in Sources */,
 				38ADA3B81C626AAF0093502F /* main.m in Sources */,
@@ -569,7 +575,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = $PRODUCT_NAME/PrefixHeader.pch;
 				INFOPLIST_FILE = TRProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lc.daydaycook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -584,7 +590,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = $PRODUCT_NAME/PrefixHeader.pch;
 				INFOPLIST_FILE = TRProject/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lc.daydaycook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
