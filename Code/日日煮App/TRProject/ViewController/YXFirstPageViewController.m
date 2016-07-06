@@ -14,7 +14,7 @@
 #import "YXCookMenuViewController.h"
 static NSString *const identify = @"Cell";
 
-@interface YXFirstPageViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface YXFirstPageViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate>
 
 /** 回到顶部 */
 @property (nonatomic, strong) UIControl *upToTop;
@@ -27,6 +27,9 @@ static NSString *const identify = @"Cell";
 
 /** 搜索 */
 @property (nonatomic, strong) UIView *searchView;
+
+/** 搜索按钮 */
+@property (nonatomic, strong) UIButton *btnSearch;
 @end
 @implementation YXFirstPageViewController
 - (void)viewDidLoad{
@@ -34,6 +37,7 @@ static NSString *const identify = @"Cell";
     [self collectionView];
     [self upToTop];
     [self searchView];
+    [self btnSearch];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithImage:@"find_off".yx_image style:UIBarButtonItemStylePlain target:self action:@selector(clickUpTheButton:)];
     self.navigationItem.leftBarButtonItem = leftItem;
     self.navigationItem.titleView = @"TitleLogo".yx_imageView;
@@ -67,6 +71,22 @@ static NSString *const identify = @"Cell";
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
     YXCookMenuViewController *cookMenuVC = [[YXCookMenuViewController alloc]initWithData:[self.menuVM dataForRow:indexPath.row]];
     [self.navigationController pushViewController:cookMenuVC animated:YES];
+}
+#pragma mark - ScrollView Delegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    
+    CGRect rect = self.searchView.frame;
+    rect.origin.x = kScreenW - 80;
+    [UIView animateWithDuration:1 animations:^{
+        self.searchView.frame = rect;
+    }];
+}
+- (void)scrollViewWillBeginDecelerating:(UIScrollView *)scrollView{
+    CGRect rect = self.searchView.frame;
+    rect.origin.x = kScreenW - 20;
+    [UIView animateWithDuration:1 animations:^{
+         self.searchView.frame = rect;
+    }];
 }
 #pragma mark - LazyLoad 懒加载
 - (YXMenuViewModel *)menuVM {
@@ -140,18 +160,34 @@ static NSString *const identify = @"Cell";
         _searchView = [[UIView alloc] init];
         [self.view addSubview:_searchView];
         [_searchView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.equalTo(0);
+            make.right.equalTo(190);
             make.bottom.equalTo(-90);
             make.height.equalTo(45);
-            make.width.equalTo(100);
+            make.width.equalTo(200);
         }];
-        _searchView.backgroundColor = [UIColor redColor];
+        _searchView.backgroundColor = kRGBColor(253, 179, 35, 1.0);
+        _searchView.layer.cornerRadius = 22.5;
     }
     return _searchView;
 }
 
+- (UIButton *)btnSearch {
+    if(_btnSearch == nil) {
+        _btnSearch = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.searchView addSubview:_btnSearch];
+        [_btnSearch mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(10);
+            make.centerY.equalTo(0);
+            make.width.height.equalTo(33);
+        }];
+        [_btnSearch addTarget:self action:@selector(clickUpTheButton:) forControlEvents:UIControlEventTouchUpInside];
+        [_btnSearch setImage:@"search".yx_image forState:UIControlStateNormal];
+    }
+    return _btnSearch;
+}
+
 #pragma mark - Method 按钮
-//左上方按钮
+//左上方按钮&右下方按钮 去搜索页
 - (void)clickUpTheButton:sender{
     YXSearchPageViewController *searchVC = [YXSearchPageViewController new];
     [self.navigationController pushViewController:searchVC animated:YES];
@@ -191,5 +227,4 @@ static NSString *const identify = @"Cell";
 - (void)dealloc{
     [self.menuVM.dataTask cancel];
 }
-
 @end

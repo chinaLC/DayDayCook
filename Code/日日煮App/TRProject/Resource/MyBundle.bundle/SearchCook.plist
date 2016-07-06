@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<string>不限</string>
+		<string>酸</string>
+		<string>甜</string>
+		<string>苦</string>
+		<string>辣</string>
+		<string>咸</string>
+	</array>
+	<array>
+		<string>不限</string>
+		<string>焖</string>
+		<string>烧</string>
+		<string>煮</string>
+		<string>炒</string>
+		<string>蒸</string>
+	</array>
+	<array>
+		<string>不限</string>
+		<string>10分钟</string>
+		<string>20分钟</string>
+		<string>30分钟</string>
+		<string>1个小时</string>
+		<string>1个半小时</string>
+	</array>
+</array>
+</plist>

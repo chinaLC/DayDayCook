@@ -29,4 +29,7 @@
 #define WK(weakSelf) \
 __weak __typeof(&*self)weakSelf = self;\
 
+//Bundle路径
+#define kMyBundlePath [[NSBundle mainBundle]pathForResource:@"MyBundle" ofType:@"bundle"]
+
 #endif /* Constant_h */

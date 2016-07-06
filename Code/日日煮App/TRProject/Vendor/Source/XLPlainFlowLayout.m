@@ -102,7 +102,7 @@
             CGRect rect = attributes.frame;
             
             //当前的滑动距离 + 因为导航栏产生的偏移量，默认为64（如果app需求不同，需自己设置）
-            CGFloat offset = self.collectionView.contentOffset.y + _naviHeight - _headerHeight;
+            CGFloat offset = self.collectionView.contentOffset.y + _naviHeight - self.headerHeight;
             //第一个cell的y值 - 当前header的高度 - 可能存在的sectionInset的top
             CGFloat headerY = firstItemAttributes.frame.origin.y - rect.size.height - self.sectionInset.top;
             

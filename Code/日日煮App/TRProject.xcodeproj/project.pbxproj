@@ -35,6 +35,9 @@
 		DB3CEAD81D13916B009D3F52 /* YXFirstPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAD71D13916B009D3F52 /* YXFirstPageCell.m */; };
 		DB3CEB041D13A908009D3F52 /* StickCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEB031D13A908009D3F52 /* StickCollectionViewFlowLayout.m */; };
 		DB6F045F1D2A1FF70052CD75 /* YXCookMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6F045E1D2A1FF70052CD75 /* YXCookMenuView.m */; };
+		DB6F04BD1D2B95210052CD75 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6F04BC1D2B95210052CD75 /* KxMenu.m */; };
+		DB6F04C11D2B987D0052CD75 /* MyBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB6F04C01D2B987D0052CD75 /* MyBundle.bundle */; };
+		DBC9CE271D2BB3BA002577EB /* YXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9CE261D2BB3BA002577EB /* YXLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,32 +69,37 @@
 		38ADA3BA1C626AAF0093502F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3A8F54CE0222A3F4E0D59483 /* libPods-TRProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TRProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6D5968AB9B9E44E939066EA /* Pods-TRProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRProject/Pods-TRProject.release.xcconfig"; sourceTree = "<group>"; };
-		DB038E371D26A82200D84366 /* YXSearchPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXSearchPageViewController.h; sourceTree = "<group>"; };
-		DB038E381D26A82200D84366 /* YXSearchPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXSearchPageViewController.m; sourceTree = "<group>"; };
+		DB038E371D26A82200D84366 /* YXSearchPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YXSearchPageViewController.h; path = ../YXSearchPageViewController.h; sourceTree = "<group>"; };
+		DB038E381D26A82200D84366 /* YXSearchPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YXSearchPageViewController.m; path = ../YXSearchPageViewController.m; sourceTree = "<group>"; };
 		DB038E3A1D26AABA00D84366 /* XLPlainFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLPlainFlowLayout.h; sourceTree = "<group>"; };
 		DB038E3B1D26AABA00D84366 /* XLPlainFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLPlainFlowLayout.m; sourceTree = "<group>"; };
 		DB038E401D26CD0700D84366 /* YXSearchHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXSearchHeaderView.h; sourceTree = "<group>"; };
 		DB038E411D26CD0700D84366 /* YXSearchHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXSearchHeaderView.m; sourceTree = "<group>"; };
 		DB038E431D26CD2B00D84366 /* YXSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXSearchCell.h; sourceTree = "<group>"; };
 		DB038E441D26CD2B00D84366 /* YXSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXSearchCell.m; sourceTree = "<group>"; };
-		DB038E461D26E4D400D84366 /* YXMyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMyPageViewController.h; sourceTree = "<group>"; };
-		DB038E471D26E4D400D84366 /* YXMyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMyPageViewController.m; sourceTree = "<group>"; };
-		DB038E491D270DCA00D84366 /* YXCookMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXCookMenuViewController.h; sourceTree = "<group>"; };
-		DB038E4A1D270DCA00D84366 /* YXCookMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXCookMenuViewController.m; sourceTree = "<group>"; };
+		DB038E461D26E4D400D84366 /* YXMyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YXMyPageViewController.h; path = ../YXMyPageViewController.h; sourceTree = "<group>"; };
+		DB038E471D26E4D400D84366 /* YXMyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YXMyPageViewController.m; path = ../YXMyPageViewController.m; sourceTree = "<group>"; };
+		DB038E491D270DCA00D84366 /* YXCookMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YXCookMenuViewController.h; path = ../YXCookMenuViewController.h; sourceTree = "<group>"; };
+		DB038E4A1D270DCA00D84366 /* YXCookMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YXCookMenuViewController.m; path = ../YXCookMenuViewController.m; sourceTree = "<group>"; };
 		DB3CE6FE1D12315E009D3F52 /* YXMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMenuModel.h; sourceTree = "<group>"; };
 		DB3CE6FF1D12315E009D3F52 /* YXMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMenuModel.m; sourceTree = "<group>"; };
 		DB3CEAA71D12BC2D009D3F52 /* YXNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXNetManager.h; sourceTree = "<group>"; };
 		DB3CEAA81D12BC2D009D3F52 /* YXNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXNetManager.m; sourceTree = "<group>"; };
 		DB3CEAAA1D12BE91009D3F52 /* YXMenuViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMenuViewModel.h; sourceTree = "<group>"; };
 		DB3CEAAB1D12BE91009D3F52 /* YXMenuViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMenuViewModel.m; sourceTree = "<group>"; };
-		DB3CEAAD1D137F04009D3F52 /* YXFirstPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXFirstPageViewController.h; sourceTree = "<group>"; };
-		DB3CEAAE1D137F04009D3F52 /* YXFirstPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXFirstPageViewController.m; sourceTree = "<group>"; };
+		DB3CEAAD1D137F04009D3F52 /* YXFirstPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YXFirstPageViewController.h; path = ../YXFirstPageViewController.h; sourceTree = "<group>"; };
+		DB3CEAAE1D137F04009D3F52 /* YXFirstPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YXFirstPageViewController.m; path = ../YXFirstPageViewController.m; sourceTree = "<group>"; };
 		DB3CEAD61D13916B009D3F52 /* YXFirstPageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXFirstPageCell.h; sourceTree = "<group>"; };
 		DB3CEAD71D13916B009D3F52 /* YXFirstPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXFirstPageCell.m; sourceTree = "<group>"; };
 		DB3CEB021D13A908009D3F52 /* StickCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		DB3CEB031D13A908009D3F52 /* StickCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		DB6F045D1D2A1FF70052CD75 /* YXCookMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXCookMenuView.h; sourceTree = "<group>"; };
 		DB6F045E1D2A1FF70052CD75 /* YXCookMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXCookMenuView.m; sourceTree = "<group>"; };
+		DB6F04BB1D2B95210052CD75 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
+		DB6F04BC1D2B95210052CD75 /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
+		DB6F04C01D2B987D0052CD75 /* MyBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MyBundle.bundle; sourceTree = "<group>"; };
+		DBC9CE251D2BB3BA002577EB /* YXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoginViewController.h; sourceTree = "<group>"; };
+		DBC9CE261D2BB3BA002577EB /* YXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoginViewController.m; sourceTree = "<group>"; };
 		DDE25EAEFBF2DF6DBEDAD90D /* Pods-TRProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRProject/Pods-TRProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +177,7 @@
 				38A641F51C8C225D00FCBF96 /* Assets.xcassets */,
 				38A641F61C8C225D00FCBF96 /* LaunchScreen.storyboard */,
 				38A641F71C8C225D00FCBF96 /* Main.storyboard */,
+				DB6F04C01D2B987D0052CD75 /* MyBundle.bundle */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -206,14 +215,8 @@
 		38A1A3331C74526C007EEEB7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				DB3CEAAD1D137F04009D3F52 /* YXFirstPageViewController.h */,
-				DB3CEAAE1D137F04009D3F52 /* YXFirstPageViewController.m */,
-				DB038E371D26A82200D84366 /* YXSearchPageViewController.h */,
-				DB038E381D26A82200D84366 /* YXSearchPageViewController.m */,
-				DB038E461D26E4D400D84366 /* YXMyPageViewController.h */,
-				DB038E471D26E4D400D84366 /* YXMyPageViewController.m */,
-				DB038E491D270DCA00D84366 /* YXCookMenuViewController.h */,
-				DB038E4A1D270DCA00D84366 /* YXCookMenuViewController.m */,
+				DBC9CE241D2BADB0002577EB /* AllList */,
+				DBC9CE231D2BAD46002577EB /* Personal */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -291,10 +294,36 @@
 			children = (
 				DB038E3A1D26AABA00D84366 /* XLPlainFlowLayout.h */,
 				DB038E3B1D26AABA00D84366 /* XLPlainFlowLayout.m */,
+				DB6F04BB1D2B95210052CD75 /* KxMenu.h */,
+				DB6F04BC1D2B95210052CD75 /* KxMenu.m */,
 				DB3CEB021D13A908009D3F52 /* StickCollectionViewFlowLayout.h */,
 				DB3CEB031D13A908009D3F52 /* StickCollectionViewFlowLayout.m */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		DBC9CE231D2BAD46002577EB /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				DB038E461D26E4D400D84366 /* YXMyPageViewController.h */,
+				DB038E471D26E4D400D84366 /* YXMyPageViewController.m */,
+				DBC9CE251D2BB3BA002577EB /* YXLoginViewController.h */,
+				DBC9CE261D2BB3BA002577EB /* YXLoginViewController.m */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		DBC9CE241D2BADB0002577EB /* AllList */ = {
+			isa = PBXGroup;
+			children = (
+				DB3CEAAD1D137F04009D3F52 /* YXFirstPageViewController.h */,
+				DB3CEAAE1D137F04009D3F52 /* YXFirstPageViewController.m */,
+				DB038E371D26A82200D84366 /* YXSearchPageViewController.h */,
+				DB038E381D26A82200D84366 /* YXSearchPageViewController.m */,
+				DB038E491D270DCA00D84366 /* YXCookMenuViewController.h */,
+				DB038E4A1D270DCA00D84366 /* YXCookMenuViewController.m */,
+			);
+			path = AllList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +390,7 @@
 			files = (
 				3851FBDE1D0F0A750054BDA0 /* Info.plist in Resources */,
 				38A641F91C8C225D00FCBF96 /* LaunchScreen.storyboard in Resources */,
+				DB6F04C11D2B987D0052CD75 /* MyBundle.bundle in Resources */,
 				38A641F81C8C225D00FCBF96 /* Assets.xcassets in Resources */,
 				38A641FA1C8C225D00FCBF96 /* Main.storyboard in Resources */,
 			);
@@ -432,6 +462,7 @@
 				386BF94E1CBB3CE200BC74F1 /* NSString+YX.m in Sources */,
 				DB038E3C1D26AABA00D84366 /* XLPlainFlowLayout.m in Sources */,
 				DB038E421D26CD0700D84366 /* YXSearchHeaderView.m in Sources */,
+				DBC9CE271D2BB3BA002577EB /* YXLoginViewController.m in Sources */,
 				DB3CEAD81D13916B009D3F52 /* YXFirstPageCell.m in Sources */,
 				DB3CEAA91D12BC2D009D3F52 /* YXNetManager.m in Sources */,
 				DB038E4B1D270DCA00D84366 /* YXCookMenuViewController.m in Sources */,
@@ -441,6 +472,7 @@
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
 				3851FBE11D0F0C110054BDA0 /* TRBaseViewModel.m in Sources */,
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
+				DB6F04BD1D2B95210052CD75 /* KxMenu.m in Sources */,
 				DB3CE7001D12315E009D3F52 /* YXMenuModel.m in Sources */,
 				38ADA3B81C626AAF0093502F /* main.m in Sources */,
 			);
@@ -539,7 +571,7 @@
 				INFOPLIST_FILE = TRProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tarena.TRProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lc.daydaycook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -554,7 +586,7 @@
 				INFOPLIST_FILE = TRProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tarena.TRProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lc.daydaycook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

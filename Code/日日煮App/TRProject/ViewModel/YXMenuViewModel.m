@@ -23,6 +23,7 @@
         if (!error) {
             if (requestMode == VMRequestModeRefresh) {
                 [self.dataList removeAllObjects];
+                self.firstDate = model.data;
             }
             [self.dataList addObjectsFromArray:model.data];
             _page = tmpPage;

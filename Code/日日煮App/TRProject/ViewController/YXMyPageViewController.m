@@ -7,7 +7,17 @@
 //
 
 #import "YXMyPageViewController.h"
+#import "YXLoginViewController.h"
 static NSString *const myPageIdentify = @"MyPageCell";
+
+@interface YXMyPageViewController ()
+
+/** 头像 */
+@property (nonatomic, strong) UIImageView *imgHead;
+
+/** 注册登录按钮 */
+@property (nonatomic, strong) UIButton *btn;
+@end
 @implementation YXMyPageViewController
 #pragma mark - 初始化方式
 - (instancetype)initWithStyle:(UITableViewStyle)style
@@ -19,12 +29,26 @@ static NSString *const myPageIdentify = @"MyPageCell";
 }
 - (void)viewDidLoad{
     [super viewDidLoad];
+    self.navigationItem.title = @"我的日日煮";
+    UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc]initWithImage:@"back_white".yx_image style:UIBarButtonItemStyleDone target:self action:@selector(clickTheBtnBackToLastPage:)];
+    self.navigationItem.leftBarButtonItem = leftBtn;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:myPageIdentify];
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, 200)];
     UIImageView *image = @"bbgb".yx_imageView;
     [view addSubview:image];
     [image mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(0);
+    }];
+    _imgHead = @"Personal_head".yx_imageView;
+    [view addSubview:_imgHead];
+    [_imgHead mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(0);
+        make.width.height.equalTo(63);
+    }];
+    [view addSubview:self.btn];
+    [self.btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(_imgHead.mas_bottom).equalTo(10);
+        make.centerX.equalTo(0);
     }];
     self.tableView.tableHeaderView = view;
     self.tableView.tableFooterView = @"launch_back".yx_imageView;
@@ -48,8 +72,37 @@ static NSString *const myPageIdentify = @"MyPageCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:myPageIdentify forIndexPath:indexPath];
     cell.imageView.image = [self cellList][indexPath.section][indexPath.row][@"img"];
     cell.textLabel.text = [self cellList][indexPath.section][indexPath.row][@"text"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
+#pragma mark - LazyLoad 懒加载
+
+- (UIImageView *)imgHead {
+    if(_imgHead == nil) {
+        _imgHead = [[UIImageView alloc] init];
+    }
+    return _imgHead;
+}
+- (UIButton *)btn {
+    if(_btn == nil) {
+        _btn = [UIButton buttonWithType:UIButtonTypeSystem];
+        [_btn setTitle:@"注册/登录" forState:UIControlStateNormal];
+        [_btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_btn addTarget:self action:@selector(clickTheBtnPeresentToNextPage:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _btn;
+}
+
+#pragma mark - Method 
+//返回上一页
+- (void)clickTheBtnBackToLastPage:sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+//注册 登录
+- (void)clickTheBtnPeresentToNextPage:sender{
+    [self presentViewController:[YXLoginViewController new] animated:YES completion:nil];
+}
+//cell 数据
 - (NSArray<NSArray<NSDictionary *> *> *)cellList{
     return @[@[@{@"img":@"Personal_newsIcon".yx_image,
                  @"text":@"我的消息"},
@@ -62,4 +115,5 @@ static NSString *const myPageIdentify = @"MyPageCell";
              @[@{@"img":@"Personal_settingIcon".yx_image,
                  @"text":@"设置"}]];
 }
+
 @end

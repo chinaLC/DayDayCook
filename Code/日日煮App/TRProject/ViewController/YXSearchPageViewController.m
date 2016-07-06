@@ -13,6 +13,7 @@
 #import "YXMenuViewModel.h"
 #import "YXMyPageViewController.h"
 #import "YXCookMenuViewController.h"
+#import "KxMenu.h"
 static NSString *const cellIdentify = @"CollectionCell";
 static NSString *const headerIdentify = @"HeaderView";
 @interface YXSearchPageViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
@@ -67,18 +68,31 @@ static NSString *const headerIdentify = @"HeaderView";
 }
 -(CGSize)collectionView:(UICollectionView*)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
+    CGSize size = CGSizeZero;
     if(!section){
-        CGSize size = CGSizeMake(kScreenW, 400);
-        return size;
-    }else {
-        CGSize size = CGSizeMake(kScreenW, 50);
-        return size;
+        size = CGSizeMake(kScreenW, kScreenW/2.0+64);
     }
+    return size;
 }
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     UICollectionReusableView *reusableView = nil;
     if (kind == UICollectionElementKindSectionHeader) {
         YXSearchHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerIdentify forIndexPath:indexPath];
+        NSMutableArray *icList = @[].mutableCopy;
+        for (MenuDataModel *obj in self.menuVM.firstDate) {
+            if (obj.clickCount>10000) {
+                [icList addObject:obj];
+            }
+        }
+        [headerView reloadViewWithIcList:icList CompletionHandler:^{
+            [headerView.ic reloadData];
+        }];
+        [headerView.conFlavor addTarget:self action:@selector(clickUpTheTitleMenu:) forControlEvents:UIControlEventTouchUpInside];
+        [headerView.conTechnic addTarget:self action:@selector(clickUpTheTitleMenu:) forControlEvents:UIControlEventTouchUpInside];
+        [headerView.conCookTime addTarget:self action:@selector(clickUpTheTitleMenu:) forControlEvents:UIControlEventTouchUpInside];
+        headerView.conFlavor.tag = 0;
+        headerView.conTechnic.tag = 1;
+        headerView.conCookTime.tag = 2;
         reusableView = headerView;
     }
     return reusableView;
@@ -86,7 +100,7 @@ static NSString *const headerIdentify = @"HeaderView";
 #pragma mark - LazyLoad 懒加载
 - (UICollectionView *)collectionView {
     if(_collectionView == nil) {
-        XLPlainFlowLayout *layout = [[XLPlainFlowLayout alloc]initWithHeight:64 HeaderHeight:400];
+        XLPlainFlowLayout *layout = [[XLPlainFlowLayout alloc]initWithHeight:64 HeaderHeight:kScreenW/2.0+64];
         CGFloat width = (kScreenW - 30)/2.0;
         CGFloat height = width/292.0*200 + width;
         layout.itemSize = CGSizeMake(width, height);
@@ -181,6 +195,33 @@ static NSString *const headerIdentify = @"HeaderView";
 - (void)goToNextPage:sender{
     YXMyPageViewController *myPageVC = [YXMyPageViewController new];
     [self.navigationController pushViewController:myPageVC animated:YES];
+}
+//搜索选项选择
+- (void)clickUpTheTitleMenu:(ControlList *)sender{
+    if (self.collectionView.contentOffset.y < kScreenW/2.0) {
+        [self.collectionView setContentOffset:CGPointMake(0, kScreenW/2.0) animated:YES];
+        self.collectionView.bouncesZoom = NO;
+    }
+    NSString *path = [kMyBundlePath stringByAppendingPathComponent:@"SearchCook.plist"];
+    NSArray *searchList = [NSArray arrayWithContentsOfFile:path];
+    NSArray *list = searchList[sender.tag];
+    NSMutableArray *menuItems = @[].mutableCopy;
+    for (NSString *name in list) {
+        if ([name isEqualToString:@"不限"]) {
+            [menuItems addObject:[KxMenuItem menuItem:name image:nil target:nil action:nil]];
+        }else{
+            [menuItems addObject:[KxMenuItem menuItem:name image:nil target:self action:@selector(pushMenuItem:)]];
+        }
+    }
+    KxMenuItem *first = menuItems[0];
+    first.foreColor = [UIColor blueColor];
+    first.alignment = NSTextAlignmentCenter;
+    [KxMenu showMenuInView:self.view fromRect:sender.frame menuItems:menuItems];
+}
+- (void) pushMenuItem:(KxMenuItem *)sender
+{
+    //    NSLog(@"%@", sender.title);
+    self.textField.text = sender.title;
 }
 #pragma mark - dataTask
 //页面即将消失时 任务终止

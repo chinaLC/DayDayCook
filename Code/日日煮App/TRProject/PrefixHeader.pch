@@ -62,4 +62,10 @@ static const int ddLogLevel = DDLogLevelError;
 
 //#import <MWPhotoBrowser.h>      //图片浏览器
 
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
 #endif /* PrefixHeader_pch */

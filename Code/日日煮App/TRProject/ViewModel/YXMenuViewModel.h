@@ -12,6 +12,9 @@
 
 /** 加载更多数据的可变数组 */
 @property (nonatomic, strong) NSMutableArray<MenuDataModel *> *dataList;
+
+/** 第一页数据 */
+@property (nonatomic, strong) NSArray<MenuDataModel *> *firstDate;
 //对应行数
 - (NSInteger)numberForRow;
 //图片
