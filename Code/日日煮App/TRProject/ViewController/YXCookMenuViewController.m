@@ -8,6 +8,7 @@
 
 #import "YXCookMenuViewController.h"
 #import "YXCookMenuView.h"
+#import "YXLoginViewController.h"
 #define kBtnDistance ((kScreenW - 4 * 24)/4.0)
 @import AVKit;
 @import AVFoundation;
@@ -134,7 +135,7 @@
         //       } failure:^(NSError * _Nonnull error) {
         //           
         //       }];
-        _webView.scrollView.contentInset = UIEdgeInsetsMake(390, 0, 0, 0);
+        _webView.scrollView.contentInset = UIEdgeInsetsMake(390, 0, 50, 0);
         _webView.scrollView.delegate = self;
         _webView.delegate = self;
     }
@@ -339,6 +340,7 @@
 //评论
 - (void)clickBtnToTalk:sender{
     DDLogInfo(@"评论");
+    [self presentViewController:[YXLoginViewController new] animated:YES completion:nil];
 }
 //喜欢
 - (void)clickBtnToLove:(UIButton *)sender{
@@ -356,7 +358,7 @@
     if (!isFont) {
         [sender setImage:@"Details_selectFont".yx_image forState:UIControlStateNormal];
         isFont = YES;
-        NSString* str1 =[NSString stringWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%f%%'",200.0];
+        NSString* str1 =[NSString stringWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%f%%'",150.0];
         [self.webView stringByEvaluatingJavaScriptFromString:str1];
     }else {
         [sender setImage:@"Details_font".yx_image forState:UIControlStateNormal];

@@ -35,16 +35,17 @@ static NSString *const identify = @"Cell";
 @implementation YXFirstPageViewController
 - (void)viewDidLoad{
     [super viewDidLoad];
-    AFNetworkReachabilityManager *manger = [AFNetworkReachabilityManager sharedManager];
-     [manger setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
-         if (status == AFNetworkReachabilityStatusUnknown||AFNetworkReachabilityStatusNotReachable) {
-             [self.view showWarning:@"当前没有网络"];
-             return;
-         }
-         if (status == AFNetworkReachabilityStatusReachableViaWWAN) {
-             [self.view showWarning:@"当前使用的是蜂窝数据流量"];
-         }
-     }];
+    //判断网络状况
+//    AFNetworkReachabilityManager *manger = [AFNetworkReachabilityManager sharedManager];
+//     [manger setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+//         if (status == AFNetworkReachabilityStatusUnknown||AFNetworkReachabilityStatusNotReachable) {
+//             [self.view showWarning:@"当前没有网络"];
+//             return;
+//         }
+//         if (status == AFNetworkReachabilityStatusReachableViaWWAN) {
+//             [self.view showWarning:@"当前使用的是蜂窝数据流量"];
+//         }
+//     }];
     //用户好评系统
 //    LBToAppStore *toAppStore = [[LBToAppStore alloc]init];
 //    toAppStore.myAppID = @"???";
