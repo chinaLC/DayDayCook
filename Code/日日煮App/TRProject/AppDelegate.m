@@ -26,6 +26,7 @@
         //图片上的数字, 弹出提示, 声音提示
         [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound];
     }
+    [NSThread sleepForTimeInterval:1.0];
     return YES;
 }
 

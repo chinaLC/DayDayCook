@@ -9,6 +9,8 @@
 #import "AppDelegate+System.h"
 #import <MLTransition.h>
 #import "YXFirstPageViewController.h"
+#import "YXWelcomeViewController.h"
+#import <SMS_SDK/SMSSDK.h>
 @implementation AppDelegate (System)
 
 #pragma mark - 方法
@@ -34,6 +36,17 @@
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    
+    /* ================ Mob支持 =================  */
+    
+    [SMSSDK registerApp:kMobAppKey
+             withSecret:kMobAppSecret];
+    
+    /* ========= UINavigationBar appearance ==========  */
+    
+    [UINavigationBar appearance].barStyle = UIBarStyleBlack;
+    [UINavigationBar appearance].translucent = NO;
+    [UINavigationBar appearance].barTintColor = kRGBColor(244, 187, 73, 1.0);
     [self window];
 }
 
@@ -44,10 +57,15 @@
         [_window makeKeyAndVisible];
         YXFirstPageViewController *firstPageVC = [[YXFirstPageViewController alloc]init];
         UINavigationController *navi = [[UINavigationController alloc]initWithRootViewController:firstPageVC];
-        [UINavigationBar appearance].barStyle = UIBarStyleBlack;
-        [UINavigationBar appearance].translucent = NO;
-        [UINavigationBar appearance].barTintColor = kRGBColor(244, 187, 73, 1.0);
-        _window.rootViewController = navi;
+        NSDictionary *infoDic = [NSBundle mainBundle].infoDictionary;
+        NSString *version = infoDic[@"CFBundleShortVersionString"];
+        NSString *runVersion = [[NSUserDefaults standardUserDefaults]stringForKey:@"RunVersion"];
+        if (runVersion == nil || ![runVersion isEqualToString:version]) {
+            self.window.rootViewController = [YXWelcomeViewController new];
+        }else{
+            self.window.rootViewController = navi;
+        }
+        [[NSUserDefaults standardUserDefaults]synchronize];
     }
     return _window;
 }

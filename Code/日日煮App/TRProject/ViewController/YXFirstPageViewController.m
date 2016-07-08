@@ -12,6 +12,7 @@
 #import "StickCollectionViewFlowLayout.h"
 #import "YXSearchPageViewController.h"
 #import "YXCookMenuViewController.h"
+#import "LBToAppStore.h"
 static NSString *const identify = @"Cell";
 
 @interface YXFirstPageViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate>
@@ -34,6 +35,20 @@ static NSString *const identify = @"Cell";
 @implementation YXFirstPageViewController
 - (void)viewDidLoad{
     [super viewDidLoad];
+    AFNetworkReachabilityManager *manger = [AFNetworkReachabilityManager sharedManager];
+     [manger setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+         if (status == AFNetworkReachabilityStatusUnknown||AFNetworkReachabilityStatusNotReachable) {
+             [self.view showWarning:@"当前没有网络"];
+             return;
+         }
+         if (status == AFNetworkReachabilityStatusReachableViaWWAN) {
+             [self.view showWarning:@"当前使用的是蜂窝数据流量"];
+         }
+     }];
+    //用户好评系统
+//    LBToAppStore *toAppStore = [[LBToAppStore alloc]init];
+//    toAppStore.myAppID = @"???";
+//    [toAppStore showGotoAppStore:self];
     [self collectionView];
     [self upToTop];
     [self searchView];
@@ -87,6 +102,15 @@ static NSString *const identify = @"Cell";
     [UIView animateWithDuration:0.5 animations:^{
          self.searchView.frame = rect;
     }];
+}
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat yOffset = scrollView.contentOffset.y;
+    if(yOffset>kScreenH){
+        self.upToTop.layer.hidden = NO;
+    }else{
+        self.upToTop.layer.hidden = YES;
+    }
 }
 #pragma mark - LazyLoad 懒加载
 - (YXMenuViewModel *)menuVM {

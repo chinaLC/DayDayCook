@@ -14,8 +14,16 @@
 @implementation UIView (HUD)
 - (void)showBusyHUD{
     dispatch_async(dispatch_get_main_queue(), ^{
-        [MBProgressHUD hideAllHUDsForView:self animated:YES];
-        MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self animated:YES];
+        MBProgressHUD *hud = [[MBProgressHUD alloc]initWithView:self];
+        [self addSubview:hud];
+        UIImage *img = [UIImage animatedImageNamed:@"loadingIcon" duration:.4];
+        UIImageView *image = [[UIImageView alloc]initWithImage:img];
+        UIImageView *image_t = @"loadingIconk".yx_imageView;
+        [image_t addSubview:image];
+        hud.customView = image_t;
+        [hud setMode:MBProgressHUDModeCustomView];
+        hud.color = [UIColor clearColor];
+        [hud show:YES];
         [hud hide:YES afterDelay:kTimeOut];
     });
 }

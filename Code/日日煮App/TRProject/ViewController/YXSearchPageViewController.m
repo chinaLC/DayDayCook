@@ -14,9 +14,10 @@
 #import "YXMyPageViewController.h"
 #import "YXCookMenuViewController.h"
 #import "KxMenu.h"
+#import "YXSearchSomeThingViewController.h"
 static NSString *const cellIdentify = @"CollectionCell";
 static NSString *const headerIdentify = @"HeaderView";
-@interface YXSearchPageViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface YXSearchPageViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UITextFieldDelegate, UIScrollViewDelegate>
 
 /** 上方Navi中部TextField */
 @property (nonatomic, strong) UITextField *textField;
@@ -26,6 +27,9 @@ static NSString *const headerIdentify = @"HeaderView";
 
 /** ViewModel层解析 */
 @property (nonatomic, strong) YXMenuViewModel *menuVM;
+
+/** 回到顶部 */
+@property (nonatomic, strong) UIControl *upToTop;
 @end
 
 @implementation YXSearchPageViewController
@@ -97,6 +101,24 @@ static NSString *const headerIdentify = @"HeaderView";
     }
     return reusableView;
 }
+#pragma mark - ScrollView Delegate
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat yOffset = scrollView.contentOffset.y;
+    if(yOffset>kScreenH){
+        self.upToTop.layer.hidden = NO;
+    }else{
+        self.upToTop.layer.hidden = YES;
+    }
+}
+#pragma mark - UITextField Delegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    if (textField == self.textField) {
+        [self keyBoardSelectReturn];
+        [self.textField resignFirstResponder];
+    }
+    return YES;
+}
 #pragma mark - LazyLoad 懒加载
 - (UICollectionView *)collectionView {
     if(_collectionView == nil) {
@@ -166,8 +188,30 @@ static NSString *const headerIdentify = @"HeaderView";
         }];
         _textField.leftView = view;
         _textField.leftViewMode = UITextFieldViewModeUnlessEditing;
+//        [_textField addTarget:self action:@selector(controlEventEditingChanged:) forControlEvents:UIControlEventEditingChanged];
+        _textField.delegate = self;
+        _textField.returnKeyType = UIReturnKeySearch;
     }
     return _textField;
+}
+- (UIControl *)upToTop {
+    if(_upToTop == nil) {
+        _upToTop = [[UIControl alloc] init];
+        [self.view addSubview:_upToTop];
+        [_upToTop mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.equalTo(-30);
+            make.bottom.equalTo(-60);
+            make.width.height.equalTo(45);
+        }];
+        _upToTop.layer.cornerRadius = 45/2.0;
+        UIImageView *image = @"upupup".yx_imageView;
+        [_upToTop addSubview:image];
+        [image mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.edges.equalTo(0);
+        }];
+        [_upToTop addTarget:self action:@selector(clickItWillToTop:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _upToTop;
 }
 #pragma mark - Method 事件
 //头部刷新
@@ -186,7 +230,10 @@ static NSString *const headerIdentify = @"HeaderView";
         }
     }];
 }
-
+//回到顶部
+- (void)clickItWillToTop:sender{
+    [self.collectionView scrollToTop];
+}
 //返回上一页
 - (void)backToLastPage:sender{
     [self.navigationController popViewControllerAnimated:YES];
@@ -218,10 +265,19 @@ static NSString *const headerIdentify = @"HeaderView";
     first.alignment = NSTextAlignmentCenter;
     [KxMenu showMenuInView:self.view fromRect:sender.frame menuItems:menuItems];
 }
-- (void) pushMenuItem:(KxMenuItem *)sender
+- (void)pushMenuItem:(KxMenuItem *)sender
 {
-    //    NSLog(@"%@", sender.title);
     self.textField.text = sender.title;
+}
+//点击回车跳转界面
+- (void)keyBoardSelectReturn{
+    YXSearchSomeThingViewController *searchVC = [[YXSearchSomeThingViewController alloc]initWithKey:self.textField.text];
+    searchVC.navigationItem.title = self.textField.text;
+    [self.navigationController pushViewController:searchVC animated:NO];
+}
+#pragma mark - touch
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
 }
 #pragma mark - dataTask
 //页面即将消失时 任务终止

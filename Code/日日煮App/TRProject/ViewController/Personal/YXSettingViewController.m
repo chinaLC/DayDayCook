@@ -7,6 +7,10 @@
 //
 
 #import "YXSettingViewController.h"
+#import "YXIdeaViewController.h"
+#import "YXAboutViewController.h"
+#import "YXQuestionViewController.h"
+#define kAppItunesUrl @"itms-apps ://itunes.apple.com/gb/app/???"
 static NSString *const storyBoardID = @"YXSettingViewController";
 @interface YXSettingViewController ()<UIAlertViewDelegate>
 //是否接收推送
@@ -59,6 +63,30 @@ static NSString *const storyBoardID = @"YXSettingViewController";
         alertView.delegate = self;
         [alertView show];
     }
+    if (indexPath.section == 1) {
+        if([[UIApplication sharedApplication] canOpenURL:@"prefs:root=NOTIFICATIONS_ID".yx_URL]) {
+            [[UIApplication sharedApplication] openURL:@"prefs:root=NOTIFICATIONS_ID".yx_URL];
+            [self.tableView reloadData];
+        }
+    }
+    if (indexPath.section == 2) {
+        switch (indexPath.row) {
+            case 0://意见反馈
+                [self.navigationController pushViewController:[YXIdeaViewController new] animated:YES];
+                break;
+            case 1://去好评
+                if ([[UIApplication sharedApplication]canOpenURL:kAppItunesUrl.yx_URL]) {
+                    [[UIApplication sharedApplication] openURL:kAppItunesUrl.yx_URL];
+                }
+                break;
+            case 2://常见问题
+                [self.navigationController pushViewController:[YXQuestionViewController new] animated:YES];
+                break;
+            case 3://关于日日煮
+                [self.navigationController pushViewController:[YXAboutViewController new] animated:YES];
+                break;
+        }
+    }
 }
 #pragma mark - Method 
 //计算缓存大小
@@ -73,7 +101,7 @@ static NSString *const storyBoardID = @"YXSettingViewController";
         long long fileSize = [[filemanager attributesOfItemAtPath:filePath error:nil]fileSize];
         sumSize += fileSize;
     }
-    float size_m = sumSize/(1000*1000);
+    float size_m = sumSize/(1000.0*1000.0);
     return [NSString stringWithFormat:@"%.2fM",size_m];
 }
 //返回上一页

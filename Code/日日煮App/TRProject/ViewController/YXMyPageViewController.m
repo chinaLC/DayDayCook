@@ -64,6 +64,8 @@ static NSString *const myPageIdentify = @"MyPageCell";
     if (indexPath.section) {
         YXSettingViewController *settingVC = [YXSettingViewController new];
         [self.navigationController pushViewController:settingVC animated:YES];
+    }else {
+        [self presentViewController:[YXLoginViewController new] animated:YES completion:nil];
     }
 }
 #pragma mark - UITableView DateSourse

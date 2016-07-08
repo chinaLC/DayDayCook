@@ -28,6 +28,13 @@
 		DB038E451D26CD2B00D84366 /* YXSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB038E441D26CD2B00D84366 /* YXSearchCell.m */; };
 		DB038E481D26E4D400D84366 /* YXMyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB038E471D26E4D400D84366 /* YXMyPageViewController.m */; };
 		DB038E4B1D270DCA00D84366 /* YXCookMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB038E4A1D270DCA00D84366 /* YXCookMenuViewController.m */; };
+		DB3C33541D2F6AF8009F7F84 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3C33521D2F6AF8009F7F84 /* MOBFoundation.framework */; };
+		DB3C33551D2F6AF8009F7F84 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3C33531D2F6AF8009F7F84 /* SMS_SDK.framework */; };
+		DB3C33571D2F6B49009F7F84 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3C33561D2F6B49009F7F84 /* libstdc++.tbd */; };
+		DB3C33591D2F6B59009F7F84 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3C33581D2F6B59009F7F84 /* JavaScriptCore.framework */; };
+		DB3C335B1D2F6B67009F7F84 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3C335A1D2F6B67009F7F84 /* MessageUI.framework */; };
+		DB3C335D1D2F6B85009F7F84 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3C335C1D2F6B85009F7F84 /* libicucore.tbd */; };
+		DB3C335F1D2F6B9A009F7F84 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB3C335E1D2F6B9A009F7F84 /* libz.tbd */; };
 		DB3CE7001D12315E009D3F52 /* YXMenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CE6FF1D12315E009D3F52 /* YXMenuModel.m */; };
 		DB3CEAA91D12BC2D009D3F52 /* YXNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAA81D12BC2D009D3F52 /* YXNetManager.m */; };
 		DB3CEAAC1D12BE91009D3F52 /* YXMenuViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAAB1D12BE91009D3F52 /* YXMenuViewModel.m */; };
@@ -39,6 +46,14 @@
 		DB6F04C11D2B987D0052CD75 /* MyBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB6F04C01D2B987D0052CD75 /* MyBundle.bundle */; };
 		DBC9CE271D2BB3BA002577EB /* YXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9CE261D2BB3BA002577EB /* YXLoginViewController.m */; };
 		DBC9CE2A1D2D0910002577EB /* YXSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9CE291D2D0910002577EB /* YXSettingViewController.m */; };
+		DBC9CE2D1D2DE211002577EB /* YXWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9CE2C1D2DE211002577EB /* YXWelcomeViewController.m */; };
+		DBC9CE321D2E1577002577EB /* YXIdeaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9CE311D2E1577002577EB /* YXIdeaViewController.m */; };
+		DBC9CE351D2E1CE8002577EB /* YXAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9CE341D2E1CE8002577EB /* YXAboutViewController.m */; };
+		DBC9CE381D2E1D37002577EB /* YXQuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9CE371D2E1D37002577EB /* YXQuestionViewController.m */; };
+		DBC9CE401D2E5C02002577EB /* YXSearchSomeThingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9CE3F1D2E5C02002577EB /* YXSearchSomeThingViewController.m */; };
+		DBC9CE431D2E6835002577EB /* YXSearchViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9CE421D2E6835002577EB /* YXSearchViewModel.m */; };
+		DBC9CE461D2F4394002577EB /* LBToAppStore.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9CE451D2F4394002577EB /* LBToAppStore.m */; };
+		DBC9CE4A1D2F48C9002577EB /* YXRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBC9CE491D2F48C9002577EB /* YXRegisterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +97,13 @@
 		DB038E471D26E4D400D84366 /* YXMyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YXMyPageViewController.m; path = ../YXMyPageViewController.m; sourceTree = "<group>"; };
 		DB038E491D270DCA00D84366 /* YXCookMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YXCookMenuViewController.h; path = ../YXCookMenuViewController.h; sourceTree = "<group>"; };
 		DB038E4A1D270DCA00D84366 /* YXCookMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YXCookMenuViewController.m; path = ../YXCookMenuViewController.m; sourceTree = "<group>"; };
+		DB3C33521D2F6AF8009F7F84 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		DB3C33531D2F6AF8009F7F84 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		DB3C33561D2F6B49009F7F84 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		DB3C33581D2F6B59009F7F84 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		DB3C335A1D2F6B67009F7F84 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		DB3C335C1D2F6B85009F7F84 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		DB3C335E1D2F6B9A009F7F84 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		DB3CE6FE1D12315E009D3F52 /* YXMenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXMenuModel.h; sourceTree = "<group>"; };
 		DB3CE6FF1D12315E009D3F52 /* YXMenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXMenuModel.m; sourceTree = "<group>"; };
 		DB3CEAA71D12BC2D009D3F52 /* YXNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXNetManager.h; sourceTree = "<group>"; };
@@ -99,10 +121,26 @@
 		DB6F04BB1D2B95210052CD75 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
 		DB6F04BC1D2B95210052CD75 /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
 		DB6F04C01D2B987D0052CD75 /* MyBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MyBundle.bundle; sourceTree = "<group>"; };
-		DBC9CE251D2BB3BA002577EB /* YXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoginViewController.h; sourceTree = "<group>"; };
-		DBC9CE261D2BB3BA002577EB /* YXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoginViewController.m; sourceTree = "<group>"; };
+		DBC9CE251D2BB3BA002577EB /* YXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YXLoginViewController.h; path = ../YXLoginViewController.h; sourceTree = "<group>"; };
+		DBC9CE261D2BB3BA002577EB /* YXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YXLoginViewController.m; path = ../YXLoginViewController.m; sourceTree = "<group>"; };
 		DBC9CE281D2D0910002577EB /* YXSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXSettingViewController.h; sourceTree = "<group>"; };
 		DBC9CE291D2D0910002577EB /* YXSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXSettingViewController.m; sourceTree = "<group>"; };
+		DBC9CE2B1D2DE211002577EB /* YXWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YXWelcomeViewController.h; path = ../YXWelcomeViewController.h; sourceTree = "<group>"; };
+		DBC9CE2C1D2DE211002577EB /* YXWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YXWelcomeViewController.m; path = ../YXWelcomeViewController.m; sourceTree = "<group>"; };
+		DBC9CE301D2E1577002577EB /* YXIdeaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YXIdeaViewController.h; path = ../YXIdeaViewController.h; sourceTree = "<group>"; };
+		DBC9CE311D2E1577002577EB /* YXIdeaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YXIdeaViewController.m; path = ../YXIdeaViewController.m; sourceTree = "<group>"; };
+		DBC9CE331D2E1CE8002577EB /* YXAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YXAboutViewController.h; path = ../YXAboutViewController.h; sourceTree = "<group>"; };
+		DBC9CE341D2E1CE8002577EB /* YXAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YXAboutViewController.m; path = ../YXAboutViewController.m; sourceTree = "<group>"; };
+		DBC9CE361D2E1D37002577EB /* YXQuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YXQuestionViewController.h; path = ../YXQuestionViewController.h; sourceTree = "<group>"; };
+		DBC9CE371D2E1D37002577EB /* YXQuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YXQuestionViewController.m; path = ../YXQuestionViewController.m; sourceTree = "<group>"; };
+		DBC9CE3E1D2E5C02002577EB /* YXSearchSomeThingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXSearchSomeThingViewController.h; sourceTree = "<group>"; };
+		DBC9CE3F1D2E5C02002577EB /* YXSearchSomeThingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXSearchSomeThingViewController.m; sourceTree = "<group>"; };
+		DBC9CE411D2E6835002577EB /* YXSearchViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXSearchViewModel.h; sourceTree = "<group>"; };
+		DBC9CE421D2E6835002577EB /* YXSearchViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXSearchViewModel.m; sourceTree = "<group>"; };
+		DBC9CE441D2F4394002577EB /* LBToAppStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBToAppStore.h; sourceTree = "<group>"; };
+		DBC9CE451D2F4394002577EB /* LBToAppStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBToAppStore.m; sourceTree = "<group>"; };
+		DBC9CE481D2F48C9002577EB /* YXRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRegisterViewController.h; sourceTree = "<group>"; };
+		DBC9CE491D2F48C9002577EB /* YXRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRegisterViewController.m; sourceTree = "<group>"; };
 		DDE25EAEFBF2DF6DBEDAD90D /* Pods-TRProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRProject/Pods-TRProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +149,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB3C335F1D2F6B9A009F7F84 /* libz.tbd in Frameworks */,
+				DB3C335D1D2F6B85009F7F84 /* libicucore.tbd in Frameworks */,
+				DB3C335B1D2F6B67009F7F84 /* MessageUI.framework in Frameworks */,
+				DB3C33591D2F6B59009F7F84 /* JavaScriptCore.framework in Frameworks */,
+				DB3C33571D2F6B49009F7F84 /* libstdc++.tbd in Frameworks */,
+				DB3C33541D2F6AF8009F7F84 /* MOBFoundation.framework in Frameworks */,
+				DB3C33551D2F6AF8009F7F84 /* SMS_SDK.framework in Frameworks */,
 				3899BC981C7D87620032ADEA /* CFNetwork.framework in Frameworks */,
 				0E67ABAA1424CA70AE73070B /* libPods-TRProject.a in Frameworks */,
 			);
@@ -195,6 +240,7 @@
 		38A1A3311C74526C007EEEB7 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				DB3C33511D2F6AF8009F7F84 /* SMS_SDK */,
 				DB3CEB011D13A908009D3F52 /* Source */,
 			);
 			path = Vendor;
@@ -220,6 +266,7 @@
 			children = (
 				DBC9CE241D2BADB0002577EB /* AllList */,
 				DBC9CE231D2BAD46002577EB /* Personal */,
+				DBC9CE4B1D2F4AA2002577EB /* Welcome */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -231,6 +278,8 @@
 				3851FBE01D0F0C110054BDA0 /* TRBaseViewModel.m */,
 				DB3CEAAA1D12BE91009D3F52 /* YXMenuViewModel.h */,
 				DB3CEAAB1D12BE91009D3F52 /* YXMenuViewModel.m */,
+				DBC9CE411D2E6835002577EB /* YXSearchViewModel.h */,
+				DBC9CE421D2E6835002577EB /* YXSearchViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -286,15 +335,31 @@
 		CA5127F42421C94949953D16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB3C335E1D2F6B9A009F7F84 /* libz.tbd */,
+				DB3C335C1D2F6B85009F7F84 /* libicucore.tbd */,
+				DB3C335A1D2F6B67009F7F84 /* MessageUI.framework */,
+				DB3C33581D2F6B59009F7F84 /* JavaScriptCore.framework */,
+				DB3C33561D2F6B49009F7F84 /* libstdc++.tbd */,
 				3899BC971C7D87620032ADEA /* CFNetwork.framework */,
 				3A8F54CE0222A3F4E0D59483 /* libPods-TRProject.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DB3C33511D2F6AF8009F7F84 /* SMS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				DB3C33521D2F6AF8009F7F84 /* MOBFoundation.framework */,
+				DB3C33531D2F6AF8009F7F84 /* SMS_SDK.framework */,
+			);
+			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
 		DB3CEB011D13A908009D3F52 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				DBC9CE441D2F4394002577EB /* LBToAppStore.h */,
+				DBC9CE451D2F4394002577EB /* LBToAppStore.m */,
 				DB038E3A1D26AABA00D84366 /* XLPlainFlowLayout.h */,
 				DB038E3B1D26AABA00D84366 /* XLPlainFlowLayout.m */,
 				DB6F04BB1D2B95210052CD75 /* KxMenu.h */,
@@ -310,10 +375,10 @@
 			children = (
 				DB038E461D26E4D400D84366 /* YXMyPageViewController.h */,
 				DB038E471D26E4D400D84366 /* YXMyPageViewController.m */,
-				DBC9CE251D2BB3BA002577EB /* YXLoginViewController.h */,
-				DBC9CE261D2BB3BA002577EB /* YXLoginViewController.m */,
 				DBC9CE281D2D0910002577EB /* YXSettingViewController.h */,
 				DBC9CE291D2D0910002577EB /* YXSettingViewController.m */,
+				DBC9CE471D2F4886002577EB /* Login */,
+				DBC9CE391D2E2D1C002577EB /* Setting */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -327,8 +392,43 @@
 				DB038E381D26A82200D84366 /* YXSearchPageViewController.m */,
 				DB038E491D270DCA00D84366 /* YXCookMenuViewController.h */,
 				DB038E4A1D270DCA00D84366 /* YXCookMenuViewController.m */,
+				DBC9CE3E1D2E5C02002577EB /* YXSearchSomeThingViewController.h */,
+				DBC9CE3F1D2E5C02002577EB /* YXSearchSomeThingViewController.m */,
 			);
 			path = AllList;
+			sourceTree = "<group>";
+		};
+		DBC9CE391D2E2D1C002577EB /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				DBC9CE301D2E1577002577EB /* YXIdeaViewController.h */,
+				DBC9CE311D2E1577002577EB /* YXIdeaViewController.m */,
+				DBC9CE331D2E1CE8002577EB /* YXAboutViewController.h */,
+				DBC9CE341D2E1CE8002577EB /* YXAboutViewController.m */,
+				DBC9CE361D2E1D37002577EB /* YXQuestionViewController.h */,
+				DBC9CE371D2E1D37002577EB /* YXQuestionViewController.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		DBC9CE471D2F4886002577EB /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				DBC9CE251D2BB3BA002577EB /* YXLoginViewController.h */,
+				DBC9CE261D2BB3BA002577EB /* YXLoginViewController.m */,
+				DBC9CE481D2F48C9002577EB /* YXRegisterViewController.h */,
+				DBC9CE491D2F48C9002577EB /* YXRegisterViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		DBC9CE4B1D2F4AA2002577EB /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				DBC9CE2B1D2DE211002577EB /* YXWelcomeViewController.h */,
+				DBC9CE2C1D2DE211002577EB /* YXWelcomeViewController.m */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,11 +556,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC9CE431D2E6835002577EB /* YXSearchViewModel.m in Sources */,
 				382C976A1C81D686003D1D51 /* UIView+HUD.m in Sources */,
 				DB3CEAAF1D137F04009D3F52 /* YXFirstPageViewController.m in Sources */,
+				DBC9CE321D2E1577002577EB /* YXIdeaViewController.m in Sources */,
 				DB6F045F1D2A1FF70052CD75 /* YXCookMenuView.m in Sources */,
+				DBC9CE401D2E5C02002577EB /* YXSearchSomeThingViewController.m in Sources */,
 				DB038E481D26E4D400D84366 /* YXMyPageViewController.m in Sources */,
 				DB3CEAAC1D12BE91009D3F52 /* YXMenuViewModel.m in Sources */,
+				DBC9CE461D2F4394002577EB /* LBToAppStore.m in Sources */,
 				38A1A3461C745317007EEEB7 /* NSObject+AFNetworking.m in Sources */,
 				38ADA3BB1C626AAF0093502F /* AppDelegate.m in Sources */,
 				DB3CEB041D13A908009D3F52 /* StickCollectionViewFlowLayout.m in Sources */,
@@ -470,11 +574,15 @@
 				DBC9CE271D2BB3BA002577EB /* YXLoginViewController.m in Sources */,
 				DB3CEAD81D13916B009D3F52 /* YXFirstPageCell.m in Sources */,
 				DB3CEAA91D12BC2D009D3F52 /* YXNetManager.m in Sources */,
+				DBC9CE4A1D2F48C9002577EB /* YXRegisterViewController.m in Sources */,
 				DB038E4B1D270DCA00D84366 /* YXCookMenuViewController.m in Sources */,
 				386BF94B1CBB3C9600BC74F1 /* NSObject+Parse.m in Sources */,
+				DBC9CE2D1D2DE211002577EB /* YXWelcomeViewController.m in Sources */,
+				DBC9CE381D2E1D37002577EB /* YXQuestionViewController.m in Sources */,
 				DB038E391D26A82200D84366 /* YXSearchPageViewController.m in Sources */,
 				DB038E451D26CD2B00D84366 /* YXSearchCell.m in Sources */,
 				38A1A3481C745317007EEEB7 /* UIScrollView+Refresh.m in Sources */,
+				DBC9CE351D2E1CE8002577EB /* YXAboutViewController.m in Sources */,
 				3851FBE11D0F0C110054BDA0 /* TRBaseViewModel.m in Sources */,
 				382C11831C7E8CDD00F34BB0 /* AppDelegate+System.m in Sources */,
 				DBC9CE2A1D2D0910002577EB /* YXSettingViewController.m in Sources */,
@@ -572,7 +680,12 @@
 			baseConfigurationReference = DDE25EAEFBF2DF6DBEDAD90D /* Pods-TRProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TRProject/Vendor/SMS_SDK",
+				);
 				GCC_PREFIX_HEADER = $PRODUCT_NAME/PrefixHeader.pch;
 				INFOPLIST_FILE = TRProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -587,7 +700,12 @@
 			baseConfigurationReference = B6D5968AB9B9E44E939066EA /* Pods-TRProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TRProject/Vendor/SMS_SDK",
+				);
 				GCC_PREFIX_HEADER = $PRODUCT_NAME/PrefixHeader.pch;
 				INFOPLIST_FILE = TRProject/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;

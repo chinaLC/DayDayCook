@@ -14,6 +14,7 @@
 @property (nonatomic, assign) NSInteger page;
 @end
 @implementation YXMenuViewModel
+#pragma mark - Method 网路请求
 - (void)getDataWithRequestMode:(VMRequestMode)requestMode completionHandler:(void (^)(NSError *))completionHandler{
     NSInteger tmpPage = 0;
     if (requestMode == VMRequestModeMore) {
