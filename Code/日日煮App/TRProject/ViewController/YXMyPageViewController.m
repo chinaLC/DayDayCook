@@ -35,11 +35,7 @@ static NSString *const myPageIdentify = @"MyPageCell";
     self.navigationItem.leftBarButtonItem = leftBtn;
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:myPageIdentify];
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreenW, 200)];
-    UIImageView *image = @"bbgb".yx_imageView;
-    [view addSubview:image];
-    [image mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(0);
-    }];
+    view.backgroundColor = kRGBColor(253, 183, 154, 1.0);
     _imgHead = @"Personal_head".yx_imageView;
     [view addSubview:_imgHead];
     [_imgHead mas_makeConstraints:^(MASConstraintMaker *make) {

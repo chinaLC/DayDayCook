@@ -56,7 +56,7 @@ static NSString *const identify = @"Cell";
     [self btnSearch];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithImage:@"find_off".yx_image style:UIBarButtonItemStylePlain target:self action:@selector(clickUpTheButton:)];
     self.navigationItem.leftBarButtonItem = leftItem;
-    self.navigationItem.titleView = @"TitleLogo".yx_imageView;
+    self.navigationItem.title = @"Cooook";
 }
 #pragma mark - CollectionView DataSource
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -190,7 +190,7 @@ static NSString *const identify = @"Cell";
             make.height.equalTo(45);
             make.width.equalTo(200);
         }];
-        _searchView.backgroundColor = kRGBColor(253, 179, 35, 1.0);
+        _searchView.backgroundColor = kRGBColor(253, 183, 154, 1.0);
         _searchView.layer.cornerRadius = 22.5;
     }
     return _searchView;

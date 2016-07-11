@@ -345,9 +345,11 @@
 //喜欢
 - (void)clickBtnToLove:(UIButton *)sender{
     if (!isLove) {
+        [self.view showWarning:@"已关注"];
         [sender setImage:@"Details_on_tabfavIcon".yx_image forState:UIControlStateNormal];
         isLove = YES;
     }else {
+        [self.view showWarning:@"已取消关注"];
         [sender setImage:@"Details_tabfavIcon".yx_image forState:UIControlStateNormal];
         isLove = NO;
     }

@@ -66,7 +66,7 @@
             make.left.right.bottom.equalTo(0);
             make.height.equalTo(64);
         }];
-        _bottomView.backgroundColor = kRGBColor(244, 187, 73, 1.0);
+        _bottomView.backgroundColor = kRGBColor(253, 183, 154, 1.0);
     }
     return _bottomView;
 }
@@ -193,11 +193,17 @@
         _lab = [[UILabel alloc] init];
         [self addSubview:_lab];
         [_lab mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(self.mas_right).equalTo(-40);
+            make.left.equalTo(self.mas_centerX).equalTo(-5);
+            make.right.equalTo(-10);
             make.centerY.equalTo(0);
         }];
-        _lab.font = [UIFont systemFontOfSize:15];
+        
         _lab.textColor = kRGBColor(167, 130, 78, 1.0);
+        
+        _lab.font = [UIFont systemFontOfSize:14];
+        _lab.adjustsFontSizeToFitWidth = YES;
+//        _lab.minimumFontSize = 6;
+        
     }
     return _lab;
 }

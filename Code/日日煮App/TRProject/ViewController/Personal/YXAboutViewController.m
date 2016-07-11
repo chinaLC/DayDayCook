@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = kRGBColor(252, 247, 245, 1.0);
-    self.navigationItem.title = @"关于日日煮";
+    self.navigationItem.title = @"关于";
     UIBarButtonItem *leftBtn = [[UIBarButtonItem alloc]initWithImage:@"back_white".yx_image style:UIBarButtonItemStyleDone target:self action:@selector(clickTheBtnBackToLastPage:)];
     self.navigationItem.leftBarButtonItem = leftBtn;
     [self img];
@@ -45,7 +45,7 @@
             make.top.equalTo(100);
             make.width.height.equalTo(100);
         }];
-        _img.image = @"Icon-72".yx_image;
+        _img.image = @"logo".yx_image;
 	}
 	return _img;
 }

@@ -46,7 +46,7 @@
     
     [UINavigationBar appearance].barStyle = UIBarStyleBlack;
     [UINavigationBar appearance].translucent = NO;
-    [UINavigationBar appearance].barTintColor = kRGBColor(244, 187, 73, 1.0);
+    [UINavigationBar appearance].barTintColor = kRGBColor(253, 183, 154, 1.0);
     [self window];
 }
 

@@ -14,12 +14,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="V8b-CZ-dQx">
-                            <rect key="frame" x="0.0" y="437" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="451" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.9882352941176471" green="0.96862745098039216" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <sections>
-                            <tableViewSection footerTitle="日日煮app在运行加载过程中, 所产生的图片和视频等缓存, 点击清除, 让你的手机运行速度加快" id="sip-Ef-f7l">
+                            <tableViewSection footerTitle="Cooookapp在运行加载过程中, 所产生的图片和视频等缓存, 点击清除, 让你的手机运行速度加快" id="sip-Ef-f7l">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nVu-8b-Uhe">
                                         <rect key="frame" x="0.0" y="35" width="320" height="44"/>
@@ -60,7 +60,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection footerTitle="如果您要关闭或开启此应用的新消息通知, 请在iPhone的 “设置” - “通知” 功能中找到应用程序 “日日煮” 更改" id="cMl-Pl-wcc">
+                            <tableViewSection footerTitle="如果您要关闭或开启此应用的新消息通知, 请在iPhone的 “设置” - “通知” 功能中找到应用程序 “cooook” 更改" id="cMl-Pl-wcc">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="A3m-th-yDA" detailTextLabel="i1y-Pc-X8G" style="IBUITableViewCellStyleValue1" id="w2d-mf-dhk">
                                         <rect key="frame" x="0.0" y="120.5" width="320" height="44"/>
@@ -91,7 +91,7 @@
                             <tableViewSection id="OJ4-NI-iCO">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="I1Z-PK-PVT" style="IBUITableViewCellStyleDefault" id="Cnt-2u-Qan">
-                                        <rect key="frame" x="0.0" y="206" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="220" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cnt-2u-Qan" id="bYb-rr-PrB">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
@@ -108,7 +108,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Al1-Pi-gaf" style="IBUITableViewCellStyleDefault" id="gAc-jY-9JB">
-                                        <rect key="frame" x="0.0" y="250" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="264" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gAc-jY-9JB" id="3OH-aE-Glu">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
@@ -125,7 +125,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="vRU-zd-t1X" style="IBUITableViewCellStyleDefault" id="zK3-7c-EY0">
-                                        <rect key="frame" x="0.0" y="294" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="308" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zK3-7c-EY0" id="3i2-Zw-Awf">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
@@ -142,13 +142,13 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Zz7-oR-6y9" style="IBUITableViewCellStyleDefault" id="J2J-b8-tMn">
-                                        <rect key="frame" x="0.0" y="338" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="352" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J2J-b8-tMn" id="dUQ-mV-Mlv">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="关于日日煮" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zz7-oR-6y9">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="关于" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zz7-oR-6y9">
                                                     <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -187,7 +187,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_logo" translatesAutoresizingMaskIntoConstraints="NO" id="fGP-PC-gFL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="fGP-PC-gFL">
                                 <rect key="frame" x="60" y="60" width="200" height="109"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="KI0-pe-E3S"/>
@@ -304,8 +304,8 @@
                                     <action selector="clickTheBtnForForgetThePassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kAw-Ny-lhu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快速登录日日煮,开启极致美食之旅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1h-GR-3tG">
-                                <rect key="frame" x="53" y="411" width="214.5" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="快速登录,开启极致美食之旅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1h-GR-3tG">
+                                <rect key="frame" x="74" y="411" width="172.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.39215686274509803" green="0.31764705882352939" blue="0.26666666666666666" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -529,9 +529,9 @@
         <image name="Personal_setting_logclearIcon" width="24" height="24"/>
         <image name="accountImg" width="20" height="20"/>
         <image name="cancel_login" width="17" height="17"/>
-        <image name="launch_logo" width="200" height="109"/>
         <image name="login" width="300" height="45"/>
         <image name="login_on" width="300" height="45"/>
+        <image name="logo" width="371" height="334"/>
         <image name="passwordImg" width="20" height="20"/>
         <image name="phoneNumberIcon" width="20" height="20"/>
         <image name="qq" width="50" height="50"/>

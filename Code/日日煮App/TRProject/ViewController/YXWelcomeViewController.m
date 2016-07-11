@@ -48,7 +48,7 @@
             img.image = welcomeList[i].yx_image;
             [_welcomeScrollView addSubview:img];
         }
-        UIControl *con = [[UIControl alloc]initWithFrame:CGRectMake(kScreenW * welcomeList.count-kScreenW/2.0, kScreenH/4.0, kScreenW/2.0, kScreenH/4.0)];
+        UIControl *con = [[UIControl alloc]initWithFrame:CGRectMake(kScreenW * (welcomeList.count-1), 0, kScreenW, kScreenH)];
         [_welcomeScrollView addSubview:con];
         [con addTarget:self action:@selector(clickUpItStartToEnjoyApp:) forControlEvents:UIControlEventTouchUpInside];
         _welcomeScrollView.contentSize = CGSizeMake(kScreenW * welcomeList.count, 0);

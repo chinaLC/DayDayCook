@@ -42,7 +42,7 @@
         _labelTitle = [[UILabel alloc] init];
         [self.bottomView addSubview:_labelTitle];
         [_labelTitle mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(16);
+            make.bottom.equalTo(self.labelDec.mas_top).equalTo(-10);
             make.left.equalTo(16);
             make.right.equalTo(-5);
         }];
@@ -57,12 +57,14 @@
         [self.bottomView addSubview:_labelDec];
         [_labelDec mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(15);
-            make.top.equalTo(self.labelTitle.mas_bottom).equalTo(12);
+            make.centerY.equalTo(0);
             make.right.equalTo(-15);
         }];
         _labelDec.textColor = kRGBColor(174, 165, 168, 1.0);
         _labelDec.font = [UIFont systemFontOfSize:14];
+        
         _labelDec.numberOfLines = 2;
+        
     }
     return _labelDec;
 }
@@ -71,21 +73,25 @@
     if(_labelNum == nil) {
         _labelNum = [[UILabel alloc] init];
         UIImageView *imageHeart = @"like1".yx_imageView;
-        [self.bottomView addSubview:imageHeart];
-        [imageHeart mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.bottom.equalTo(-20);
-            make.left.equalTo(30);
-        }];
         UIImageView *imageViewNum = @"view".yx_imageView;
         [self.bottomView addSubview:imageViewNum];
         [imageViewNum mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(imageHeart.mas_right).equalTo(30);
-            make.bottom.equalTo(-20);
+            make.width.equalTo(19);
+            make.height.equalTo(14);
+            make.centerX.equalTo(-10);
+            make.top.equalTo(self.labelDec.mas_bottom).equalTo(10);
+        }];
+        [self.bottomView addSubview:imageHeart];
+        [imageHeart mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.equalTo(self.labelDec.mas_bottom).equalTo(10);
+            make.width.equalTo(19);
+            make.height.equalTo(14);
+            make.right.equalTo(imageViewNum.mas_left).equalTo(-20);
         }];
         [self.bottomView addSubview:_labelNum];
         [_labelNum mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(imageViewNum.mas_right).equalTo(30);
-            make.bottom.equalTo(-18);
+            make.top.equalTo(self.labelDec.mas_bottom).equalTo(10);
+            make.left.equalTo(imageViewNum.mas_right).equalTo(10);
         }];
         _labelNum.textColor = kRGBColor(174, 165, 168, 1.0);
         _labelNum.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
@@ -94,16 +100,16 @@
 }
 
 - (UIView *)bottomView {
-	if(_bottomView == nil) {
-		_bottomView = [[UIView alloc] init];
+    if(_bottomView == nil) {
+        _bottomView = [[UIView alloc] init];
         [self.contentView addSubview:_bottomView];
         [_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.bottom.equalTo(0);
             make.top.equalTo(self.imageV.mas_bottom);
         }];
         _bottomView.backgroundColor = [UIColor whiteColor];
-	}
-	return _bottomView;
+    }
+    return _bottomView;
 }
 
 @end
