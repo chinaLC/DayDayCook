@@ -340,7 +340,7 @@
 //评论
 - (void)clickBtnToTalk:sender{
     DDLogInfo(@"评论");
-    [self presentViewController:[YXLoginViewController new] animated:YES completion:nil];
+//    [self presentViewController:[YXLoginViewController new] animated:YES completion:nil];
 }
 //喜欢
 - (void)clickBtnToLove:(UIButton *)sender{

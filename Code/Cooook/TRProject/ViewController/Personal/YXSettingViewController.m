@@ -75,8 +75,11 @@ static NSString *const storyBoardID = @"YXSettingViewController";
                 [self.navigationController pushViewController:[YXIdeaViewController new] animated:YES];
                 break;
             case 1://去好评
+                
                 if ([[UIApplication sharedApplication]canOpenURL:kAppItunesUrl.yx_URL]) {
                     [[UIApplication sharedApplication] openURL:kAppItunesUrl.yx_URL];
+                }else{
+                    [self.view showWarning:@"暂时无法好评"];
                 }
                 break;
             case 2://常见问题

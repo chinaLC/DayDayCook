@@ -152,6 +152,7 @@ static NSString *const identify = @"Cell";
         _collectionView.dataSource = self;
         _collectionView.backgroundColor = [UIColor whiteColor];
         [_collectionView registerClass:[YXFirstPageCell class] forCellWithReuseIdentifier:identify];
+
         NSArray *arr = @[@"load1".yx_image, @"load2".yx_image, @"load3".yx_image, @"load4".yx_image, @"load5".yx_image, @"load6".yx_image];
         NSArray *arr1 = @[@"load1".yx_image];
         MJRefreshGifHeader *header = [MJRefreshGifHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefresh:)];

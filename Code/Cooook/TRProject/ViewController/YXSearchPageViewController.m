@@ -148,6 +148,7 @@ static NSString *const headerIdentify = @"HeaderView";
         header.lastUpdatedTimeLabel.hidden = YES;
         header.stateLabel.hidden = YES;
         self.collectionView.mj_header = header;
+    
         WK(weakSelf);
         [self.collectionView addBackFooterRefresh:^{
             [weakSelf.menuVM getDataWithRequestMode:VMRequestModeMore completionHandler:^(NSError *error) {

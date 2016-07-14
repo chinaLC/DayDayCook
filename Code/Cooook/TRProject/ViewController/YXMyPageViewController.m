@@ -61,7 +61,8 @@ static NSString *const myPageIdentify = @"MyPageCell";
         YXSettingViewController *settingVC = [YXSettingViewController new];
         [self.navigationController pushViewController:settingVC animated:YES];
     }else {
-        [self presentViewController:[YXLoginViewController new] animated:YES completion:nil];
+//        [self presentViewController:[YXLoginViewController new] animated:YES completion:nil];
+        [self.view showWarning:@"暂时无法使用"];
     }
 }
 #pragma mark - UITableView DateSourse
@@ -103,7 +104,8 @@ static NSString *const myPageIdentify = @"MyPageCell";
 }
 //注册 登录
 - (void)clickTheBtnPeresentToNextPage:sender{
-    [self presentViewController:[YXLoginViewController new] animated:YES completion:nil];
+//    [self presentViewController:[YXLoginViewController new] animated:YES completion:nil];
+    [self.view showWarning:@"暂时无法登陆"];
 }
 //cell 数据
 - (NSArray<NSArray<NSDictionary *> *> *)cellList{
