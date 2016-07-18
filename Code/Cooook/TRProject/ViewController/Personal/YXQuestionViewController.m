@@ -7,11 +7,12 @@
 //
 
 #import "YXQuestionViewController.h"
+#import <WebKit/WebKit.h>
 #define kQuestionPath @"http://api.daydaycook.com.cn/daydaycook/h5/recipe/loadProblem.do?username=(null)&password=(null)"
 @interface YXQuestionViewController ()
 
 /** WebView */
-@property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, strong) WKWebView *webView;
 @end
 
 @implementation YXQuestionViewController
@@ -28,9 +29,9 @@
 - (void)clickTheBtnBackToLastPage:sender{
     [self.navigationController popViewControllerAnimated:YES];
 }
-- (UIWebView *)webView {
+- (WKWebView *)webView {
 	if(_webView == nil) {
-		_webView = [[UIWebView alloc] init];
+		_webView = [[WKWebView alloc] init];
         [self.view addSubview:_webView];
         [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(0);

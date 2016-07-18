@@ -53,6 +53,7 @@ static NSString *const storyBoardID = @"YXLoginViewController";
     }
     return self;
 }
+
 #pragma mark - Method
 //左上角X返回上一页
 - (IBAction)dismissToLastPage:(UIButton *)sender {

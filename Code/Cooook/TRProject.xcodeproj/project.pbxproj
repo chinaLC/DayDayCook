@@ -40,6 +40,7 @@
 		DB3CEAAF1D137F04009D3F52 /* YXFirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAAE1D137F04009D3F52 /* YXFirstPageViewController.m */; };
 		DB3CEAD81D13916B009D3F52 /* YXFirstPageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEAD71D13916B009D3F52 /* YXFirstPageCell.m */; };
 		DB3CEB041D13A908009D3F52 /* StickCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3CEB031D13A908009D3F52 /* StickCollectionViewFlowLayout.m */; };
+		DB5357921D3C6F0C006F586D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5357911D3C6F0C006F586D /* WebKit.framework */; };
 		DB6F045F1D2A1FF70052CD75 /* YXCookMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6F045E1D2A1FF70052CD75 /* YXCookMenuView.m */; };
 		DB6F04BD1D2B95210052CD75 /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6F04BC1D2B95210052CD75 /* KxMenu.m */; };
 		DB6F04C11D2B987D0052CD75 /* MyBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DB6F04C01D2B987D0052CD75 /* MyBundle.bundle */; };
@@ -115,6 +116,7 @@
 		DB3CEAD71D13916B009D3F52 /* YXFirstPageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXFirstPageCell.m; sourceTree = "<group>"; };
 		DB3CEB021D13A908009D3F52 /* StickCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		DB3CEB031D13A908009D3F52 /* StickCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		DB5357911D3C6F0C006F586D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		DB6F045D1D2A1FF70052CD75 /* YXCookMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXCookMenuView.h; sourceTree = "<group>"; };
 		DB6F045E1D2A1FF70052CD75 /* YXCookMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXCookMenuView.m; sourceTree = "<group>"; };
 		DB6F04BB1D2B95210052CD75 /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB5357921D3C6F0C006F586D /* WebKit.framework in Frameworks */,
 				DB3C335F1D2F6B9A009F7F84 /* libz.tbd in Frameworks */,
 				DB3C335D1D2F6B85009F7F84 /* libicucore.tbd in Frameworks */,
 				DB3C335B1D2F6B67009F7F84 /* MessageUI.framework in Frameworks */,
@@ -334,6 +337,7 @@
 		CA5127F42421C94949953D16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DB5357911D3C6F0C006F586D /* WebKit.framework */,
 				DB3C335E1D2F6B9A009F7F84 /* libz.tbd */,
 				DB3C335C1D2F6B85009F7F84 /* libicucore.tbd */,
 				DB3C335A1D2F6B67009F7F84 /* MessageUI.framework */,

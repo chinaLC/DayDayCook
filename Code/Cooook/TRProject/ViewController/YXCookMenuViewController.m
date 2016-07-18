@@ -9,13 +9,14 @@
 #import "YXCookMenuViewController.h"
 #import "YXCookMenuView.h"
 #import "YXLoginViewController.h"
+#import <WebKit/WebKit.h>
 #define kBtnDistance ((kScreenW - 4 * 24)/4.0)
 @import AVKit;
 @import AVFoundation;
-@interface YXCookMenuViewController ()<UIScrollViewDelegate, UIWebViewDelegate, UIAlertViewDelegate>
+@interface YXCookMenuViewController ()<UIScrollViewDelegate, UIAlertViewDelegate>
 
 /** WebView */
-@property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, strong) WKWebView *webView;
 
 /** img */
 @property (nonatomic, strong) UIImageView *img;
@@ -112,9 +113,9 @@
     
 }
 #pragma mark - LazyLoad 懒加载
-- (UIWebView *)webView {
+- (WKWebView *)webView {
     if(_webView == nil) {
-        _webView = [[UIWebView alloc] init];
+        _webView = [[WKWebView alloc] init];
         [self.view addSubview:_webView];
         [_webView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(0);
@@ -135,9 +136,9 @@
         //       } failure:^(NSError * _Nonnull error) {
         //           
         //       }];
+        
         _webView.scrollView.contentInset = UIEdgeInsetsMake(390, 0, 50, 0);
         _webView.scrollView.delegate = self;
-        _webView.delegate = self;
     }
     return _webView;
 }
@@ -291,6 +292,8 @@
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
     self.navigationController.navigationBarHidden = NO;
+#warning 离开界面时, 要将scrollView的代理设置为空, 不然无法释放内存, 会崩溃.
+    self.webView.scrollView.delegate = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -361,12 +364,14 @@
         [sender setImage:@"Details_selectFont".yx_image forState:UIControlStateNormal];
         isFont = YES;
         NSString* str1 =[NSString stringWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%f%%'",150.0];
-        [self.webView stringByEvaluatingJavaScriptFromString:str1];
+//        [self.webView stringByEvaluatingJavaScriptFromString:str1];
+        [self.webView evaluateJavaScript:str1 completionHandler:nil];
     }else {
         [sender setImage:@"Details_font".yx_image forState:UIControlStateNormal];
         isFont = NO;
         NSString* str1 =[NSString stringWithFormat:@"document.getElementsByTagName('body')[0].style.webkitTextSizeAdjust= '%f%%'",100.0];
-        [self.webView stringByEvaluatingJavaScriptFromString:str1];
+//        [self.webView stringByEvaluatingJavaScriptFromString:str1];
+        [self.webView evaluateJavaScript:str1 completionHandler:nil];
     }
 }
 //分享
